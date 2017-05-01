@@ -1,0 +1,666 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		70A63095A42B276E82F1A26F /* Pods_CookiesAnalyzer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D485B514E21B0C9692A81DC /* Pods_CookiesAnalyzer.framework */; };
+		CBE0C7AE1EB75823000118F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBE0C7AD1EB75823000118F9 /* Assets.xcassets */; };
+		CBE0C7BC1EB75823000118F9 /* CookiesAnalyzerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE0C7BB1EB75823000118F9 /* CookiesAnalyzerTests.swift */; };
+		CBE0C7C71EB75823000118F9 /* CookiesAnalyzerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE0C7C61EB75823000118F9 /* CookiesAnalyzerUITests.swift */; };
+		CBE0C7D61EB75888000118F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBE0C7D41EB75888000118F9 /* Main.storyboard */; };
+		CBE0C7E91EB758A3000118F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE0C7D81EB758A3000118F9 /* AppDelegate.swift */; };
+		CBE0C7EA1EB758A3000118F9 /* AvailableBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE0C7D91EB758A3000118F9 /* AvailableBrowser.swift */; };
+		CBE0C7EB1EB758A3000118F9 /* BinaryCookies.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE0C7DA1EB758A3000118F9 /* BinaryCookies.swift */; };
+		CBE0C7EC1EB758A3000118F9 /* BrowserCookies.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE0C7DB1EB758A3000118F9 /* BrowserCookies.swift */; };
+		CBE0C7ED1EB758A3000118F9 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE0C7DC1EB758A3000118F9 /* ContainerViewController.swift */; };
+		CBE0C7EE1EB758A3000118F9 /* DefaultBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE0C7DD1EB758A3000118F9 /* DefaultBrowser.swift */; };
+		CBE0C7EF1EB758A3000118F9 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE0C7DE1EB758A3000118F9 /* DetailViewController.swift */; };
+		CBE0C7F01EB758A3000118F9 /* EpochFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE0C7DF1EB758A3000118F9 /* EpochFormatter.swift */; };
+		CBE0C7F11EB758A3000118F9 /* FindMostCookies.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE0C7E01EB758A3000118F9 /* FindMostCookies.swift */; };
+		CBE0C7F21EB758A3000118F9 /* FirefoxCookiesPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE0C7E11EB758A3000118F9 /* FirefoxCookiesPath.swift */; };
+		CBE0C7F31EB758A3000118F9 /* MostCookies.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE0C7E21EB758A3000118F9 /* MostCookies.swift */; };
+		CBE0C7F41EB758A3000118F9 /* OverviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE0C7E31EB758A3000118F9 /* OverviewController.swift */; };
+		CBE0C7F51EB758A3000118F9 /* ReadFirefoxCookies.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE0C7E41EB758A3000118F9 /* ReadFirefoxCookies.swift */; };
+		CBE0C7F61EB758A3000118F9 /* ReadSafariCookies.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE0C7E51EB758A3000118F9 /* ReadSafariCookies.swift */; };
+		CBE0C7F71EB758A3000118F9 /* SafariCookiesPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE0C7E61EB758A3000118F9 /* SafariCookiesPath.swift */; };
+		CBE0C7F81EB758A3000118F9 /* StartValuesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE0C7E71EB758A3000118F9 /* StartValuesManager.swift */; };
+		CBE0C7F91EB758A3000118F9 /* Substrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE0C7E81EB758A3000118F9 /* Substrings.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CBE0C7B81EB75823000118F9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CBE0C79E1EB75823000118F9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CBE0C7A51EB75823000118F9;
+			remoteInfo = CookiesAnalyzer;
+		};
+		CBE0C7C31EB75823000118F9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CBE0C79E1EB75823000118F9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CBE0C7A51EB75823000118F9;
+			remoteInfo = CookiesAnalyzer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		55827B4CCB7EE8A622DEDCB6 /* Pods-CookiesAnalyzer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CookiesAnalyzer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CookiesAnalyzer/Pods-CookiesAnalyzer.debug.xcconfig"; sourceTree = "<group>"; };
+		7D485B514E21B0C9692A81DC /* Pods_CookiesAnalyzer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CookiesAnalyzer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBE0C7A61EB75823000118F9 /* CookiesAnalyzer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CookiesAnalyzer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBE0C7AD1EB75823000118F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CBE0C7B21EB75823000118F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CBE0C7B71EB75823000118F9 /* CookiesAnalyzerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CookiesAnalyzerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBE0C7BB1EB75823000118F9 /* CookiesAnalyzerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookiesAnalyzerTests.swift; sourceTree = "<group>"; };
+		CBE0C7BD1EB75823000118F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CBE0C7C21EB75823000118F9 /* CookiesAnalyzerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CookiesAnalyzerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBE0C7C61EB75823000118F9 /* CookiesAnalyzerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookiesAnalyzerUITests.swift; sourceTree = "<group>"; };
+		CBE0C7C81EB75823000118F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CBE0C7D51EB75888000118F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CBE0C7D71EB758A2000118F9 /* CookiesAnalyzer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CookiesAnalyzer-Bridging-Header.h"; sourceTree = "<group>"; };
+		CBE0C7D81EB758A3000118F9 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CBE0C7D91EB758A3000118F9 /* AvailableBrowser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvailableBrowser.swift; sourceTree = "<group>"; };
+		CBE0C7DA1EB758A3000118F9 /* BinaryCookies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BinaryCookies.swift; sourceTree = "<group>"; };
+		CBE0C7DB1EB758A3000118F9 /* BrowserCookies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrowserCookies.swift; sourceTree = "<group>"; };
+		CBE0C7DC1EB758A3000118F9 /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
+		CBE0C7DD1EB758A3000118F9 /* DefaultBrowser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultBrowser.swift; sourceTree = "<group>"; };
+		CBE0C7DE1EB758A3000118F9 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		CBE0C7DF1EB758A3000118F9 /* EpochFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EpochFormatter.swift; sourceTree = "<group>"; };
+		CBE0C7E01EB758A3000118F9 /* FindMostCookies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindMostCookies.swift; sourceTree = "<group>"; };
+		CBE0C7E11EB758A3000118F9 /* FirefoxCookiesPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirefoxCookiesPath.swift; sourceTree = "<group>"; };
+		CBE0C7E21EB758A3000118F9 /* MostCookies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MostCookies.swift; sourceTree = "<group>"; };
+		CBE0C7E31EB758A3000118F9 /* OverviewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverviewController.swift; sourceTree = "<group>"; };
+		CBE0C7E41EB758A3000118F9 /* ReadFirefoxCookies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadFirefoxCookies.swift; sourceTree = "<group>"; };
+		CBE0C7E51EB758A3000118F9 /* ReadSafariCookies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadSafariCookies.swift; sourceTree = "<group>"; };
+		CBE0C7E61EB758A3000118F9 /* SafariCookiesPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SafariCookiesPath.swift; sourceTree = "<group>"; };
+		CBE0C7E71EB758A3000118F9 /* StartValuesManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartValuesManager.swift; sourceTree = "<group>"; };
+		CBE0C7E81EB758A3000118F9 /* Substrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Substrings.swift; sourceTree = "<group>"; };
+		FDCE468A33E24FC76E11BDE6 /* Pods-CookiesAnalyzer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CookiesAnalyzer.release.xcconfig"; path = "Pods/Target Support Files/Pods-CookiesAnalyzer/Pods-CookiesAnalyzer.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CBE0C7A31EB75823000118F9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70A63095A42B276E82F1A26F /* Pods_CookiesAnalyzer.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBE0C7B41EB75823000118F9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBE0C7BF1EB75823000118F9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CA47FD4B1429C107B1FB9C47 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7D485B514E21B0C9692A81DC /* Pods_CookiesAnalyzer.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CBE0C79D1EB75823000118F9 = {
+			isa = PBXGroup;
+			children = (
+				CBE0C7A81EB75823000118F9 /* CookiesAnalyzer */,
+				CBE0C7BA1EB75823000118F9 /* CookiesAnalyzerTests */,
+				CBE0C7C51EB75823000118F9 /* CookiesAnalyzerUITests */,
+				CBE0C7A71EB75823000118F9 /* Products */,
+				F950D560B0CC2B990C4581FD /* Pods */,
+				CA47FD4B1429C107B1FB9C47 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		CBE0C7A71EB75823000118F9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CBE0C7A61EB75823000118F9 /* CookiesAnalyzer.app */,
+				CBE0C7B71EB75823000118F9 /* CookiesAnalyzerTests.xctest */,
+				CBE0C7C21EB75823000118F9 /* CookiesAnalyzerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CBE0C7A81EB75823000118F9 /* CookiesAnalyzer */ = {
+			isa = PBXGroup;
+			children = (
+				CBE0C7D81EB758A3000118F9 /* AppDelegate.swift */,
+				CBE0C7D91EB758A3000118F9 /* AvailableBrowser.swift */,
+				CBE0C7DA1EB758A3000118F9 /* BinaryCookies.swift */,
+				CBE0C7DB1EB758A3000118F9 /* BrowserCookies.swift */,
+				CBE0C7DC1EB758A3000118F9 /* ContainerViewController.swift */,
+				CBE0C7DD1EB758A3000118F9 /* DefaultBrowser.swift */,
+				CBE0C7DE1EB758A3000118F9 /* DetailViewController.swift */,
+				CBE0C7DF1EB758A3000118F9 /* EpochFormatter.swift */,
+				CBE0C7E01EB758A3000118F9 /* FindMostCookies.swift */,
+				CBE0C7E11EB758A3000118F9 /* FirefoxCookiesPath.swift */,
+				CBE0C7E21EB758A3000118F9 /* MostCookies.swift */,
+				CBE0C7E31EB758A3000118F9 /* OverviewController.swift */,
+				CBE0C7E41EB758A3000118F9 /* ReadFirefoxCookies.swift */,
+				CBE0C7E51EB758A3000118F9 /* ReadSafariCookies.swift */,
+				CBE0C7E61EB758A3000118F9 /* SafariCookiesPath.swift */,
+				CBE0C7E71EB758A3000118F9 /* StartValuesManager.swift */,
+				CBE0C7E81EB758A3000118F9 /* Substrings.swift */,
+				CBE0C7AD1EB75823000118F9 /* Assets.xcassets */,
+				CBE0C7D41EB75888000118F9 /* Main.storyboard */,
+				CBE0C7B21EB75823000118F9 /* Info.plist */,
+				CBE0C7D71EB758A2000118F9 /* CookiesAnalyzer-Bridging-Header.h */,
+			);
+			path = CookiesAnalyzer;
+			sourceTree = "<group>";
+		};
+		CBE0C7BA1EB75823000118F9 /* CookiesAnalyzerTests */ = {
+			isa = PBXGroup;
+			children = (
+				CBE0C7BB1EB75823000118F9 /* CookiesAnalyzerTests.swift */,
+				CBE0C7BD1EB75823000118F9 /* Info.plist */,
+			);
+			path = CookiesAnalyzerTests;
+			sourceTree = "<group>";
+		};
+		CBE0C7C51EB75823000118F9 /* CookiesAnalyzerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CBE0C7C61EB75823000118F9 /* CookiesAnalyzerUITests.swift */,
+				CBE0C7C81EB75823000118F9 /* Info.plist */,
+			);
+			path = CookiesAnalyzerUITests;
+			sourceTree = "<group>";
+		};
+		F950D560B0CC2B990C4581FD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				55827B4CCB7EE8A622DEDCB6 /* Pods-CookiesAnalyzer.debug.xcconfig */,
+				FDCE468A33E24FC76E11BDE6 /* Pods-CookiesAnalyzer.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CBE0C7A51EB75823000118F9 /* CookiesAnalyzer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CBE0C7CB1EB75823000118F9 /* Build configuration list for PBXNativeTarget "CookiesAnalyzer" */;
+			buildPhases = (
+				DE37B132C8FD2F168D110CBF /* [CP] Check Pods Manifest.lock */,
+				CBE0C7A21EB75823000118F9 /* Sources */,
+				CBE0C7A31EB75823000118F9 /* Frameworks */,
+				CBE0C7A41EB75823000118F9 /* Resources */,
+				857A005C72A042938BBE7F43 /* [CP] Embed Pods Frameworks */,
+				8E996C8686A5E2BDE06D8325 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CookiesAnalyzer;
+			productName = CookiesAnalyzer;
+			productReference = CBE0C7A61EB75823000118F9 /* CookiesAnalyzer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CBE0C7B61EB75823000118F9 /* CookiesAnalyzerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CBE0C7CE1EB75823000118F9 /* Build configuration list for PBXNativeTarget "CookiesAnalyzerTests" */;
+			buildPhases = (
+				CBE0C7B31EB75823000118F9 /* Sources */,
+				CBE0C7B41EB75823000118F9 /* Frameworks */,
+				CBE0C7B51EB75823000118F9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CBE0C7B91EB75823000118F9 /* PBXTargetDependency */,
+			);
+			name = CookiesAnalyzerTests;
+			productName = CookiesAnalyzerTests;
+			productReference = CBE0C7B71EB75823000118F9 /* CookiesAnalyzerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CBE0C7C11EB75823000118F9 /* CookiesAnalyzerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CBE0C7D11EB75823000118F9 /* Build configuration list for PBXNativeTarget "CookiesAnalyzerUITests" */;
+			buildPhases = (
+				CBE0C7BE1EB75823000118F9 /* Sources */,
+				CBE0C7BF1EB75823000118F9 /* Frameworks */,
+				CBE0C7C01EB75823000118F9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CBE0C7C41EB75823000118F9 /* PBXTargetDependency */,
+			);
+			name = CookiesAnalyzerUITests;
+			productName = CookiesAnalyzerUITests;
+			productReference = CBE0C7C21EB75823000118F9 /* CookiesAnalyzerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CBE0C79E1EB75823000118F9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Bodo Schönfeld";
+				TargetAttributes = {
+					CBE0C7A51EB75823000118F9 = {
+						CreatedOnToolsVersion = 8.3.2;
+						LastSwiftMigration = 0830;
+						ProvisioningStyle = Automatic;
+					};
+					CBE0C7B61EB75823000118F9 = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = CBE0C7A51EB75823000118F9;
+					};
+					CBE0C7C11EB75823000118F9 = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = CBE0C7A51EB75823000118F9;
+					};
+				};
+			};
+			buildConfigurationList = CBE0C7A11EB75823000118F9 /* Build configuration list for PBXProject "CookiesAnalyzer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CBE0C79D1EB75823000118F9;
+			productRefGroup = CBE0C7A71EB75823000118F9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CBE0C7A51EB75823000118F9 /* CookiesAnalyzer */,
+				CBE0C7B61EB75823000118F9 /* CookiesAnalyzerTests */,
+				CBE0C7C11EB75823000118F9 /* CookiesAnalyzerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CBE0C7A41EB75823000118F9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBE0C7AE1EB75823000118F9 /* Assets.xcassets in Resources */,
+				CBE0C7D61EB75888000118F9 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBE0C7B51EB75823000118F9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBE0C7C01EB75823000118F9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		857A005C72A042938BBE7F43 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CookiesAnalyzer/Pods-CookiesAnalyzer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8E996C8686A5E2BDE06D8325 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CookiesAnalyzer/Pods-CookiesAnalyzer-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DE37B132C8FD2F168D110CBF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CBE0C7A21EB75823000118F9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBE0C7EE1EB758A3000118F9 /* DefaultBrowser.swift in Sources */,
+				CBE0C7EC1EB758A3000118F9 /* BrowserCookies.swift in Sources */,
+				CBE0C7F31EB758A3000118F9 /* MostCookies.swift in Sources */,
+				CBE0C7F51EB758A3000118F9 /* ReadFirefoxCookies.swift in Sources */,
+				CBE0C7F21EB758A3000118F9 /* FirefoxCookiesPath.swift in Sources */,
+				CBE0C7F01EB758A3000118F9 /* EpochFormatter.swift in Sources */,
+				CBE0C7EB1EB758A3000118F9 /* BinaryCookies.swift in Sources */,
+				CBE0C7ED1EB758A3000118F9 /* ContainerViewController.swift in Sources */,
+				CBE0C7F11EB758A3000118F9 /* FindMostCookies.swift in Sources */,
+				CBE0C7F61EB758A3000118F9 /* ReadSafariCookies.swift in Sources */,
+				CBE0C7EA1EB758A3000118F9 /* AvailableBrowser.swift in Sources */,
+				CBE0C7E91EB758A3000118F9 /* AppDelegate.swift in Sources */,
+				CBE0C7F81EB758A3000118F9 /* StartValuesManager.swift in Sources */,
+				CBE0C7F41EB758A3000118F9 /* OverviewController.swift in Sources */,
+				CBE0C7EF1EB758A3000118F9 /* DetailViewController.swift in Sources */,
+				CBE0C7F71EB758A3000118F9 /* SafariCookiesPath.swift in Sources */,
+				CBE0C7F91EB758A3000118F9 /* Substrings.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBE0C7B31EB75823000118F9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBE0C7BC1EB75823000118F9 /* CookiesAnalyzerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBE0C7BE1EB75823000118F9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBE0C7C71EB75823000118F9 /* CookiesAnalyzerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CBE0C7B91EB75823000118F9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CBE0C7A51EB75823000118F9 /* CookiesAnalyzer */;
+			targetProxy = CBE0C7B81EB75823000118F9 /* PBXContainerItemProxy */;
+		};
+		CBE0C7C41EB75823000118F9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CBE0C7A51EB75823000118F9 /* CookiesAnalyzer */;
+			targetProxy = CBE0C7C31EB75823000118F9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CBE0C7D41EB75888000118F9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CBE0C7D51EB75888000118F9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CBE0C7C91EB75823000118F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CBE0C7CA1EB75823000118F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+			};
+			name = Release;
+		};
+		CBE0C7CC1EB75823000118F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 55827B4CCB7EE8A622DEDCB6 /* Pods-CookiesAnalyzer.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = CookiesAnalyzer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = de.nicefield.CookiesAnalyzer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CookiesAnalyzer/CookiesAnalyzer-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		CBE0C7CD1EB75823000118F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FDCE468A33E24FC76E11BDE6 /* Pods-CookiesAnalyzer.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = CookiesAnalyzer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = de.nicefield.CookiesAnalyzer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CookiesAnalyzer/CookiesAnalyzer-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		CBE0C7CF1EB75823000118F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = CookiesAnalyzerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = de.nicefield.CookiesAnalyzerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CookiesAnalyzer.app/Contents/MacOS/CookiesAnalyzer";
+			};
+			name = Debug;
+		};
+		CBE0C7D01EB75823000118F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = CookiesAnalyzerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = de.nicefield.CookiesAnalyzerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CookiesAnalyzer.app/Contents/MacOS/CookiesAnalyzer";
+			};
+			name = Release;
+		};
+		CBE0C7D21EB75823000118F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = CookiesAnalyzerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = de.nicefield.CookiesAnalyzerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = CookiesAnalyzer;
+			};
+			name = Debug;
+		};
+		CBE0C7D31EB75823000118F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = CookiesAnalyzerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = de.nicefield.CookiesAnalyzerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = CookiesAnalyzer;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CBE0C7A11EB75823000118F9 /* Build configuration list for PBXProject "CookiesAnalyzer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CBE0C7C91EB75823000118F9 /* Debug */,
+				CBE0C7CA1EB75823000118F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CBE0C7CB1EB75823000118F9 /* Build configuration list for PBXNativeTarget "CookiesAnalyzer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CBE0C7CC1EB75823000118F9 /* Debug */,
+				CBE0C7CD1EB75823000118F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CBE0C7CE1EB75823000118F9 /* Build configuration list for PBXNativeTarget "CookiesAnalyzerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CBE0C7CF1EB75823000118F9 /* Debug */,
+				CBE0C7D01EB75823000118F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CBE0C7D11EB75823000118F9 /* Build configuration list for PBXNativeTarget "CookiesAnalyzerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CBE0C7D21EB75823000118F9 /* Debug */,
+				CBE0C7D31EB75823000118F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CBE0C79E1EB75823000118F9 /* Project object */;
+}
