@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		70A63095A42B276E82F1A26F /* Pods_CookiesAnalyzer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D485B514E21B0C9692A81DC /* Pods_CookiesAnalyzer.framework */; };
+		CB1B47011EB76D4000683C31 /* ChromeCookiesPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1B47001EB76D4000683C31 /* ChromeCookiesPath.swift */; };
 		CBE0C7AE1EB75823000118F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBE0C7AD1EB75823000118F9 /* Assets.xcassets */; };
 		CBE0C7BC1EB75823000118F9 /* CookiesAnalyzerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE0C7BB1EB75823000118F9 /* CookiesAnalyzerTests.swift */; };
 		CBE0C7C71EB75823000118F9 /* CookiesAnalyzerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE0C7C61EB75823000118F9 /* CookiesAnalyzerUITests.swift */; };
@@ -51,6 +52,7 @@
 /* Begin PBXFileReference section */
 		55827B4CCB7EE8A622DEDCB6 /* Pods-CookiesAnalyzer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CookiesAnalyzer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CookiesAnalyzer/Pods-CookiesAnalyzer.debug.xcconfig"; sourceTree = "<group>"; };
 		7D485B514E21B0C9692A81DC /* Pods_CookiesAnalyzer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CookiesAnalyzer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB1B47001EB76D4000683C31 /* ChromeCookiesPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChromeCookiesPath.swift; sourceTree = "<group>"; };
 		CBE0C7A61EB75823000118F9 /* CookiesAnalyzer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CookiesAnalyzer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBE0C7AD1EB75823000118F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CBE0C7B21EB75823000118F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -116,6 +118,64 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CB1B46FB1EB7670F00683C31 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CBE0C7DA1EB758A3000118F9 /* BinaryCookies.swift */,
+				CBE0C7DF1EB758A3000118F9 /* EpochFormatter.swift */,
+				CBE0C7E81EB758A3000118F9 /* Substrings.swift */,
+				CBE0C7D81EB758A3000118F9 /* AppDelegate.swift */,
+				CBE0C7AD1EB75823000118F9 /* Assets.xcassets */,
+				CBE0C7B21EB75823000118F9 /* Info.plist */,
+				CBE0C7D71EB758A2000118F9 /* CookiesAnalyzer-Bridging-Header.h */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CB1B46FC1EB7673A00683C31 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CBE0C7DC1EB758A3000118F9 /* ContainerViewController.swift */,
+				CBE0C7E31EB758A3000118F9 /* OverviewController.swift */,
+				CBE0C7DE1EB758A3000118F9 /* DetailViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		CB1B46FD1EB7677A00683C31 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CBE0C7D41EB75888000118F9 /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		CB1B46FE1EB7679100683C31 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CB1B46FF1EB76D1A00683C31 /* Chrome */,
+				CBE0C7D91EB758A3000118F9 /* AvailableBrowser.swift */,
+				CBE0C7DB1EB758A3000118F9 /* BrowserCookies.swift */,
+				CBE0C7DD1EB758A3000118F9 /* DefaultBrowser.swift */,
+				CBE0C7E01EB758A3000118F9 /* FindMostCookies.swift */,
+				CBE0C7E11EB758A3000118F9 /* FirefoxCookiesPath.swift */,
+				CBE0C7E21EB758A3000118F9 /* MostCookies.swift */,
+				CBE0C7E41EB758A3000118F9 /* ReadFirefoxCookies.swift */,
+				CBE0C7E51EB758A3000118F9 /* ReadSafariCookies.swift */,
+				CBE0C7E61EB758A3000118F9 /* SafariCookiesPath.swift */,
+				CBE0C7E71EB758A3000118F9 /* StartValuesManager.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		CB1B46FF1EB76D1A00683C31 /* Chrome */ = {
+			isa = PBXGroup;
+			children = (
+				CB1B47001EB76D4000683C31 /* ChromeCookiesPath.swift */,
+			);
+			name = Chrome;
+			sourceTree = "<group>";
+		};
 		CBE0C79D1EB75823000118F9 = {
 			isa = PBXGroup;
 			children = (
@@ -141,27 +201,10 @@
 		CBE0C7A81EB75823000118F9 /* CookiesAnalyzer */ = {
 			isa = PBXGroup;
 			children = (
-				CBE0C7D81EB758A3000118F9 /* AppDelegate.swift */,
-				CBE0C7D91EB758A3000118F9 /* AvailableBrowser.swift */,
-				CBE0C7DA1EB758A3000118F9 /* BinaryCookies.swift */,
-				CBE0C7DB1EB758A3000118F9 /* BrowserCookies.swift */,
-				CBE0C7DC1EB758A3000118F9 /* ContainerViewController.swift */,
-				CBE0C7DD1EB758A3000118F9 /* DefaultBrowser.swift */,
-				CBE0C7DE1EB758A3000118F9 /* DetailViewController.swift */,
-				CBE0C7DF1EB758A3000118F9 /* EpochFormatter.swift */,
-				CBE0C7E01EB758A3000118F9 /* FindMostCookies.swift */,
-				CBE0C7E11EB758A3000118F9 /* FirefoxCookiesPath.swift */,
-				CBE0C7E21EB758A3000118F9 /* MostCookies.swift */,
-				CBE0C7E31EB758A3000118F9 /* OverviewController.swift */,
-				CBE0C7E41EB758A3000118F9 /* ReadFirefoxCookies.swift */,
-				CBE0C7E51EB758A3000118F9 /* ReadSafariCookies.swift */,
-				CBE0C7E61EB758A3000118F9 /* SafariCookiesPath.swift */,
-				CBE0C7E71EB758A3000118F9 /* StartValuesManager.swift */,
-				CBE0C7E81EB758A3000118F9 /* Substrings.swift */,
-				CBE0C7AD1EB75823000118F9 /* Assets.xcassets */,
-				CBE0C7D41EB75888000118F9 /* Main.storyboard */,
-				CBE0C7B21EB75823000118F9 /* Info.plist */,
-				CBE0C7D71EB758A2000118F9 /* CookiesAnalyzer-Bridging-Header.h */,
+				CB1B46FE1EB7679100683C31 /* Model */,
+				CB1B46FD1EB7677A00683C31 /* View */,
+				CB1B46FC1EB7673A00683C31 /* Controller */,
+				CB1B46FB1EB7670F00683C31 /* Supporting Files */,
 			);
 			path = CookiesAnalyzer;
 			sourceTree = "<group>";
@@ -394,6 +437,7 @@
 				CBE0C7F41EB758A3000118F9 /* OverviewController.swift in Sources */,
 				CBE0C7EF1EB758A3000118F9 /* DetailViewController.swift in Sources */,
 				CBE0C7F71EB758A3000118F9 /* SafariCookiesPath.swift in Sources */,
+				CB1B47011EB76D4000683C31 /* ChromeCookiesPath.swift in Sources */,
 				CBE0C7F91EB758A3000118F9 /* Substrings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -643,6 +687,7 @@
 				CBE0C7CD1EB75823000118F9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CBE0C7CE1EB75823000118F9 /* Build configuration list for PBXNativeTarget "CookiesAnalyzerTests" */ = {
 			isa = XCConfigurationList;
@@ -651,6 +696,7 @@
 				CBE0C7D01EB75823000118F9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CBE0C7D11EB75823000118F9 /* Build configuration list for PBXNativeTarget "CookiesAnalyzerUITests" */ = {
 			isa = XCConfigurationList;
@@ -659,6 +705,7 @@
 				CBE0C7D31EB75823000118F9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

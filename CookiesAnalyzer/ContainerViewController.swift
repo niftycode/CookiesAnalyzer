@@ -39,7 +39,8 @@ class ContainerViewController: NSViewController {
         let defaultBrowser = DefaultBrowser()
         
         // 'browser' is a local variable?
-        let _: String = defaultBrowser.readLaunchServices()
+        let browser: String = defaultBrowser.readLaunchServices()
+        print("default browser: \(browser)")
         
         self.setupDefaultBrowser()
     }
@@ -78,8 +79,6 @@ class ContainerViewController: NSViewController {
     
     private func setupDefaultBrowser() {
         // TODO: read cookie data from the default browser
-        
-        print("setupDefaultBrowser()")
         
         myData = readSafariCookies.readFromBinaryFile()
         cookiesInDatabase = myData?.count

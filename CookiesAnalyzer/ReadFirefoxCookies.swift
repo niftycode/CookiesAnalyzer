@@ -45,65 +45,48 @@ class ReadFirefoxCookies: NSObject {
                 try Int.fetchOne(db, "SELECT COUNT(*) FROM moz_cookies")!
             }
             
-            /*
-            dbQueue.inDatabase { db in
-                for row in Row.fetchCursor(db, "SELECT * FROM moz_cookies") {
-                    let title: String = row.value(named: "baseDomain")
-                    domainArray.append(title)
+            
+            do {
+                try dbQueue.inDatabase { db in
+                    
+                    let rows = try Row.fetchCursor(db, "SELECT * FROM moz_cookies")
+                    
+                    while let row = try rows.next() {
+                        let title: String = row.value(named: "baseDomain")
+                        domainArray.append(title)
+                    }
                 }
-            }
-            */
-            
-            try! dbQueue.inDatabase { db in
-            
-                let rows = try Row.fetchCursor(db, "SELECT * FROM moz_cookies")
-                
-                while let row = try rows.next() {
-                    let title: String = row.value(named: "baseDomain")
-                    domainArray.append(title)
-                }
-                
-            
+            } catch _ {
+                print("Error: Cannot read database!")
             }
             
-            /*
-            dbQueue.inDatabase { db in
-                for row in Row.fetchCursor(db, "SELECT * FROM moz_cookies") {
-                    let lastAccessedTime: String = row.value(named: "lastAccessed")
-                    lastAccessedArray.append(lastAccessedTime)
+            do {
+                try dbQueue.inDatabase { db in
+                    
+                    let rows = try Row.fetchCursor(db, "SELECT * FROM moz_cookies")
+                    
+                    while let row = try rows.next() {
+                        let lastAccessedTime: String = row.value(named: "lastAccessed")
+                        lastAccessedArray.append(lastAccessedTime)
+                    }
                 }
-            }
-            */
-            
-            try! dbQueue.inDatabase { db in
-                
-                let rows = try Row.fetchCursor(db, "SELECT * FROM moz_cookies")
-                
-                while let row = try rows.next() {
-                    let lastAccessedTime: String = row.value(named: "lastAccessed")
-                    lastAccessedArray.append(lastAccessedTime)
-                }
+            } catch _ {
+                print("Error: Cannot read database!")
             }
             
-            /*
-            dbQueue.inDatabase { db in
-                for row in Row.fetchCursor(db, "SELECT * FROM moz_cookies") {
-                    let creationTime: String = row.value(named: "creationTime")
-                    creationTimeArray.append(creationTime)
+            do {
+                try dbQueue.inDatabase { db in
+                    
+                    let rows = try Row.fetchCursor(db, "SELECT * FROM moz_cookies")
+                    
+                    while let row = try rows.next() {
+                        let creationTime: String = row.value(named: "creationTime")
+                        creationTimeArray.append(creationTime)
+                    }
                 }
+            } catch _ {
+                print("Error: Cannot read database!")
             }
-            */
-            
-            try! dbQueue.inDatabase { db in
-                
-                let rows = try Row.fetchCursor(db, "SELECT * FROM moz_cookies")
-                
-                while let row = try rows.next() {
-                    let creationTime: String = row.value(named: "creationTime")
-                    creationTimeArray.append(creationTime)
-                }
-            }
-            
             
             var n = 0
             
@@ -119,7 +102,6 @@ class ReadFirefoxCookies: NSObject {
                     
                     sqliteData.append(BrowserCookies(baseDomain: a, creationTime: b))
                     
-                    // n++ is deprecated
                     n+=1
                     
                 } while n < cookiesCount
