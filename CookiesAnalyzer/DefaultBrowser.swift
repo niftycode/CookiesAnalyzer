@@ -8,9 +8,7 @@
 
 import Foundation
 
-
 class DefaultBrowser {
-    
     
     /**
      Creates the path to the LaunchServices plist file.

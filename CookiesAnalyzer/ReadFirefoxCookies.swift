@@ -40,7 +40,6 @@ class ReadFirefoxCookies: NSObject {
             var lastAccessedArray = [String]()
             var creationTimeArray = [String]()
             
-            
             let cookiesCount = try! dbQueue.inDatabase { db in
                 try Int.fetchOne(db, "SELECT COUNT(*) FROM moz_cookies")!
             }

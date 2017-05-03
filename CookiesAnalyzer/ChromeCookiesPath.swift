@@ -11,11 +11,24 @@ import Cocoa
 
 class ChromeCookiesPath {
     
-    static func createCookiesUrl() -> URL {
+    /**
+     Determine the path of Chrome's cookies file.
+     - version: 0.1
+     - returns: The URL string to the Chrome cookies file.
+     */
+    func createChromeCookiesPath() throws -> String {
         let home = FileManager.default.homeDirectoryForCurrentUser
         let cookiesPath = "Library/Application Support/Google/Chrome/Default/Cookies"
         let cookiesUrl = home.appendingPathComponent(cookiesPath)
-        return cookiesUrl
+        
+        var urlString = ""
+        
+        do {
+            urlString = try String(contentsOf: cookiesUrl)
+        } catch _ {
+            print("bad url")
+        }
+        
+        return urlString
     }
-    
 }

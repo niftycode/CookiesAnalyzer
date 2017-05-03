@@ -10,12 +10,12 @@ import Foundation
 
 class AvailableBrowser {
     
-    private let firefoxCookiesPath = FirefoxCookiesPath()
-    private let safariCookiesPath = SafariCookiesPath()
+    //private let firefoxCookiesPath = FirefoxCookiesPath()
+    //private let safariCookiesPath = SafariCookiesPath()
     
     /**
      Determine the available browser of the user's macOS.
-     - version: 0.2
+     - version: 0.3
      - date: August 22nd, 2016
      - returns: The installed Browser (as Tuple).
      */
@@ -46,7 +46,14 @@ class AvailableBrowser {
         }
         
         // Chrome Cookies Path
-        chrome = 0 // dummy value
+        let chromeCookiesPath = ChromeCookiesPath()
+        
+        do {
+            _ = try chromeCookiesPath.createChromeCookiesPath()
+            chrome = 1
+        } catch _ {
+            chrome = 0
+        }
         
         // Browser: (Firefox, Safari, Chrome)
         let browserAvailability = (firefox, safari, chrome)
