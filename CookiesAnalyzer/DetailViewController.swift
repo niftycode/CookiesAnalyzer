@@ -24,7 +24,7 @@ class DetailViewController: NSViewController {
     }
     
     /**
-     Update the user interface when the user switches to another browser. A browser flag indicates the chosen browser. In this view only a reload of the table view necessary.
+     Update the user interface when the user switches to another browser. A browser flag indicates the chosen browser. In this view is only a reload of the table view necessary.
      - version: 0.1
      - date: August 22nd, 2016
      */
@@ -76,12 +76,10 @@ class DetailViewController: NSViewController {
         -> NSTextField
     {
         let label = NSTextField(frame: CGRect(x: 0, y: 0, width: width, height: cellheight))
-        //let label = NSTextField(frame: (0, 0, width, cellheight))
         
         if (txt.characters.count) == 13 {
             
             let date = (Int(txt))!
-            // print(date)
             
             // Convert epoch time to a human readable date and time.
             let humanReadableDate = NSDate(jsonDate: "/Date(\(date))/")!
@@ -96,6 +94,7 @@ class DetailViewController: NSViewController {
             label.drawsBackground = false
             
         } else {
+            
             let epoch = String(txt.characters.dropLast(3))
             let date = Int(epoch) ?? 0
             let humanReadableDate = NSDate(jsonDate: "/Date(\(date))/")!
@@ -108,6 +107,7 @@ class DetailViewController: NSViewController {
             label.isEditable = false
             label.isBezeled = false
             label.drawsBackground = false
+            
         }
         return label
     }

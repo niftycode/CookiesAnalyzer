@@ -66,7 +66,7 @@ class OverviewController: NSViewController {
             newCookiesLabel.stringValue = String(newSafariCookies)
         } else {
             // calculate new chrome cookies
-            print("do nothing")
+            print("do nothing\n implement code for Chrome browser here...")
         }
     }
     

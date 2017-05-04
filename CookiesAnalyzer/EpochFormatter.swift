@@ -19,9 +19,17 @@ extension NSDate {
             
             // Read milliseconds part:
             var milliseconds: Int64 = 0
+            var timeStamp: TimeInterval = 0.0
+            
             if scanner.scanInt64(&milliseconds) {
-                // Milliseconds to seconds:
-                var timeStamp = TimeInterval(milliseconds)/1000.0
+                
+                if String(milliseconds).len > 13 {
+                    // epoch Chrome
+                    timeStamp = (TimeInterval(milliseconds)/1000.0)-11644473600
+                } else {
+                    // epoch Firefox and Safari
+                    timeStamp = (TimeInterval(milliseconds)/1000.0)
+                }
                 
                 // Read optional timezone part:
                 var timeZoneOffset: Int = 0

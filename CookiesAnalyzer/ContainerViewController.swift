@@ -80,6 +80,9 @@ class ContainerViewController: NSViewController {
     private func setupDefaultBrowser() {
         // TODO: read cookie data from the default browser
         
+        //myData = ReadChromeCookies.readChromeCookiesFromSqlite()
+        //cookiesInDatabase = myData?.count
+        
         myData = readSafariCookies.readFromBinaryFile()
         cookiesInDatabase = myData?.count
     }
@@ -150,7 +153,12 @@ class ContainerViewController: NSViewController {
     @IBAction func selectChromeBrowser(_ sender: NSButton) {
         browserNameLabel.stringValue = "Chrome Browser"
         browserFlag = 2
-        print("selected chrome browser")
-        // read chrome cookies goes here... (future release)
+        myData = ReadChromeCookies.readChromeCookiesFromSqlite()
+        cookiesInDatabase = myData?.count
+        overviewViewController.cookiesInDatabase = cookiesInDatabase!
+        overviewViewController.myData = myData
+        detailViewController.cookiesData = myData
+        overviewViewController.browserFlag = browserFlag
+        detailViewController.browserFlag = browserFlag
     }
 }
