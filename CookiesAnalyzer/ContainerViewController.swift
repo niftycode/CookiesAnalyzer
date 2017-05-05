@@ -80,11 +80,11 @@ class ContainerViewController: NSViewController {
     private func setupDefaultBrowser() {
         // TODO: read cookie data from the default browser
         
-        //myData = ReadChromeCookies.readChromeCookiesFromSqlite()
-        //cookiesInDatabase = myData?.count
-        
-        myData = readSafariCookies.readFromBinaryFile()
+        myData = ReadChromeCookies.readChromeCookiesFromSqlite()
         cookiesInDatabase = myData?.count
+        
+        //myData = readSafariCookies.readFromBinaryFile()
+        //cookiesInDatabase = myData?.count
     }
     
     // Show alert window
