@@ -23,6 +23,7 @@ class ContainerViewController: NSViewController {
     var myData: [BrowserCookies]?
     var cookiesInDatabase: Int?
     var browserFlag: Int = 1
+    var systemDefaultBrowser: String?
     
     
     /*
@@ -38,9 +39,9 @@ class ContainerViewController: NSViewController {
         
         let defaultBrowser = DefaultBrowser()
         
-        // 'browser' is a local variable?
-        let browser: String = defaultBrowser.readLaunchServices()
-        print("default browser: \(browser)")
+        // check for the default browser
+        systemDefaultBrowser = defaultBrowser.readLaunchServices()
+        print("default browser: \(String(describing: systemDefaultBrowser))")
         
         self.setupDefaultBrowser()
     }
@@ -56,7 +57,7 @@ class ContainerViewController: NSViewController {
         let browserAvailability = availableBrowser.checkBrowser()
         
         if (browserAvailability == (0, 0, 0)) {
-            self.warningAlert()
+            self.browserWarningAlert()
         }        
         
         if (browserAvailability.0 == 0) {
@@ -68,7 +69,7 @@ class ContainerViewController: NSViewController {
             safariButton.isEnabled = false
         } else {
             // self.updateSafariCookies()
-            // self.setupDefaultBrowser()
+            
         }
         if (browserAvailability.2 == 0) {
             chromeButton.isEnabled = false
@@ -77,18 +78,40 @@ class ContainerViewController: NSViewController {
         }
     }
     
-    private func setupDefaultBrowser() {
-        // TODO: read cookie data from the default browser
-        
+    func updateChromeCookies() {
         myData = ReadChromeCookies.readChromeCookiesFromSqlite()
         cookiesInDatabase = myData?.count
+    }
+    
+    func updateFirefoxCookies() {
+        myData = ReadFirefoxCookies.readFromSqlite()
+        cookiesInDatabase = myData?.count
+    }
+    
+    func updateSafariCookies() {
+        myData = readSafariCookies.readFromBinaryFile()
+        cookiesInDatabase = myData?.count
+    }
+    
+    private func setupDefaultBrowser() {
         
-        //myData = readSafariCookies.readFromBinaryFile()
-        //cookiesInDatabase = myData?.count
+        if (systemDefaultBrowser == "Chrome") {
+            browserNameLabel.stringValue = "Chrome Browser"
+            updateChromeCookies()
+        } else if (systemDefaultBrowser == "Firefox") {
+            browserNameLabel.stringValue = "Firefox Browser"
+            updateFirefoxCookies()
+        } else if (systemDefaultBrowser == "Safari") {
+            browserNameLabel.stringValue = "Safari Browser"
+            updateSafariCookies()
+        } else {
+            browserNameLabel.stringValue = "Unknown Browser!"
+            print("Error: Unknown Browser!")
+        }
     }
     
     // Show alert window
-    private func warningAlert() {
+    private func browserWarningAlert() {
         
         let alert = NSAlert()
         // alert.icon =
@@ -128,9 +151,9 @@ class ContainerViewController: NSViewController {
     @IBAction func selectFirefoxBrowser(_ sender: NSButton) {
         browserNameLabel.stringValue = "Firefox Browser"
         browserFlag =  0
-        myData = ReadFirefoxCookies.readFromSqlite()
-        cookiesInDatabase = myData?.count
-        
+        //myData = ReadFirefoxCookies.readFromSqlite()
+        //cookiesInDatabase = myData?.count
+        updateFirefoxCookies()
         overviewViewController.cookiesInDatabase = cookiesInDatabase!
         overviewViewController.myData = myData
         detailViewController.cookiesData = myData
@@ -141,8 +164,9 @@ class ContainerViewController: NSViewController {
     @IBAction func selectSafariBrowser(_ sender: NSButton) {
         browserNameLabel.stringValue = "Safari Browser"
         browserFlag = 1
-        myData = readSafariCookies.readFromBinaryFile()
-        cookiesInDatabase = myData?.count
+        //myData = readSafariCookies.readFromBinaryFile()
+        //cookiesInDatabase = myData?.count
+        updateSafariCookies()
         overviewViewController.cookiesInDatabase = cookiesInDatabase!
         overviewViewController.myData = myData
         detailViewController.cookiesData = myData
@@ -153,8 +177,9 @@ class ContainerViewController: NSViewController {
     @IBAction func selectChromeBrowser(_ sender: NSButton) {
         browserNameLabel.stringValue = "Chrome Browser"
         browserFlag = 2
-        myData = ReadChromeCookies.readChromeCookiesFromSqlite()
-        cookiesInDatabase = myData?.count
+        //myData = ReadChromeCookies.readChromeCookiesFromSqlite()
+        //cookiesInDatabase = myData?.count
+        updateChromeCookies()
         overviewViewController.cookiesInDatabase = cookiesInDatabase!
         overviewViewController.myData = myData
         detailViewController.cookiesData = myData

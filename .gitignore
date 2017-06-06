@@ -68,3 +68,4 @@ fastlane/test_output
 /Pods/GRDB.swift/.DS_Store
 /Pods/GRDB.swift/GRDB/.DS_Store
 /Pods/.DS_Store
+/.DS_Store
