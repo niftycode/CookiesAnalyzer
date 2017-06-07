@@ -155,13 +155,13 @@
 		CB1B46FE1EB7679100683C31 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				CBD6E7CB1EBA5859002639C0 /* Safari */,
-				CBD6E7CA1EBA584D002639C0 /* Firefox */,
-				CB1B46FF1EB76D1A00683C31 /* Chrome */,
 				CBE0C7D91EB758A3000118F9 /* AvailableBrowser.swift */,
 				CBE0C7DD1EB758A3000118F9 /* DefaultBrowser.swift */,
 				CBE0C7E01EB758A3000118F9 /* FindMostCookies.swift */,
 				CBE0C7E71EB758A3000118F9 /* StartValuesManager.swift */,
+				CBD6E7CB1EBA5859002639C0 /* Safari */,
+				CBD6E7CA1EBA584D002639C0 /* Firefox */,
+				CB1B46FF1EB76D1A00683C31 /* Chrome */,
 			);
 			name = Model;
 			sourceTree = "<group>";

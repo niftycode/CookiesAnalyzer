@@ -64,9 +64,13 @@ class OverviewController: NSViewController {
             let newSafariCookies = actualCookies - previousSafariCookies
             startValuesManager.previousSafariCookies = actualCookies
             newCookiesLabel.stringValue = String(newSafariCookies)
+        } else if (browserFlag == 2) {
+            let previousChromeCookies = startValuesManager.previousChromeCookies
+            let newChromeCookies = actualCookies - previousChromeCookies
+            startValuesManager.previousChromeCookies = actualCookies
+            newCookiesLabel.stringValue = String(newChromeCookies)
         } else {
-            // calculate new chrome cookies
-            print("do nothing\n implement code for Chrome browser here...")
+            print("Error: Unknown browser!")
         }
     }
     

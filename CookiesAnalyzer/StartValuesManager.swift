@@ -13,6 +13,7 @@ class StartValuesManager {
     private struct Cookies {
         static let previousFirefoxCookiesKey = "previousFirefoxCookies"
         static let previousSafariCookiesKey = "previousSafariCookies"
+        static let previousChromeCookiesKey = "previousChromeCookies"
     }
     
     var previousFirefoxCookies: Int {
@@ -33,6 +34,15 @@ class StartValuesManager {
         }
     }
     
+    var previousChromeCookies: Int {
+        get {
+            return (userDefaults.object(forKey: Cookies.previousChromeCookiesKey) as? Int)!
+        }
+        set (newPreviousCookies) {
+            userDefaults.set(newPreviousCookies, forKey: Cookies.previousChromeCookiesKey)
+        }
+    }
+    
     private let userDefaults = UserDefaults.standard
     
     init() {
@@ -40,7 +50,9 @@ class StartValuesManager {
     }
     
     func registerDefaultValues() {
-        let defaults = [Cookies.previousFirefoxCookiesKey: 0, Cookies.previousSafariCookiesKey: 0]
+        let defaults = [Cookies.previousFirefoxCookiesKey: 0,
+                        Cookies.previousSafariCookiesKey: 0,
+                        Cookies.previousChromeCookiesKey: 0]
         userDefaults.register(defaults: defaults)
     }
     

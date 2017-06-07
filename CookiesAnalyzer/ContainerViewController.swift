@@ -107,6 +107,7 @@ class ContainerViewController: NSViewController {
         } else {
             browserNameLabel.stringValue = "Unknown Browser!"
             print("Error: Unknown Browser!")
+            // TODO: Create an UIAlert
         }
     }
     
