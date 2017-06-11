@@ -30,10 +30,6 @@ class ReadSafariCookies {
         
         if (safariCookiesFilePath != "noFilePath") {
             
-            // cookiePath
-            // cookieURL
-            // data
-            
             BinaryCookies.parse(cookiePath: safariCookiesFilePath, callback: {
                 (error: BinaryCookiesError?, cookies) in
                 

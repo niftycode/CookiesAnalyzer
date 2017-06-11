@@ -33,7 +33,6 @@ class ReadFirefoxCookies: NSObject {
         if (firefoxCookiesFilePath != "noFilePath") {
             
             // Get data from the database
-            // let dbQueue = try DatabaseQueue(path: "/path/to/database.sqlite")
             let dbQueue = try! DatabaseQueue(path: firefoxCookiesFilePath)
             
             var domainArray = [String]()

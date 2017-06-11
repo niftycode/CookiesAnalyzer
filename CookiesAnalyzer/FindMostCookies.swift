@@ -36,7 +36,7 @@ class FindMostCookies {
             counts[baseDomain] = (counts[baseDomain] ?? 0) + 1
         }
         
-        // Notice: It might be a better idea to check if there are really five
+        // ToDo: It might be a better idea to check if there are really five
         // key-value-pairs in the 'counts' Dictionary? May be in later version?
         var z = 0
         

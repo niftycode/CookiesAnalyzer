@@ -152,8 +152,6 @@ class ContainerViewController: NSViewController {
     @IBAction func selectFirefoxBrowser(_ sender: NSButton) {
         browserNameLabel.stringValue = "Firefox Browser"
         browserFlag =  0
-        //myData = ReadFirefoxCookies.readFromSqlite()
-        //cookiesInDatabase = myData?.count
         updateFirefoxCookies()
         overviewViewController.cookiesInDatabase = cookiesInDatabase!
         overviewViewController.myData = myData
@@ -165,8 +163,6 @@ class ContainerViewController: NSViewController {
     @IBAction func selectSafariBrowser(_ sender: NSButton) {
         browserNameLabel.stringValue = "Safari Browser"
         browserFlag = 1
-        //myData = readSafariCookies.readFromBinaryFile()
-        //cookiesInDatabase = myData?.count
         updateSafariCookies()
         overviewViewController.cookiesInDatabase = cookiesInDatabase!
         overviewViewController.myData = myData
@@ -178,8 +174,6 @@ class ContainerViewController: NSViewController {
     @IBAction func selectChromeBrowser(_ sender: NSButton) {
         browserNameLabel.stringValue = "Chrome Browser"
         browserFlag = 2
-        //myData = ReadChromeCookies.readChromeCookiesFromSqlite()
-        //cookiesInDatabase = myData?.count
         updateChromeCookies()
         overviewViewController.cookiesInDatabase = cookiesInDatabase!
         overviewViewController.myData = myData

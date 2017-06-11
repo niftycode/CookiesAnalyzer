@@ -10,9 +10,6 @@ import Foundation
 
 class AvailableBrowser {
     
-    //private let firefoxCookiesPath = FirefoxCookiesPath()
-    //private let safariCookiesPath = SafariCookiesPath()
-    
     /**
      Determine the available browser of the user's macOS.
      - version: 0.3

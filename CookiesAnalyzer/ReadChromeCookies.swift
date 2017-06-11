@@ -92,8 +92,6 @@ class ReadChromeCookies {
                     let b = creationTimeArray[n]
                     //let b = lastAccessedArray[n] // no longer used
                     
-                    // sqliteData.append(MozillaCookies(baseDomain: a, lastAccessed: b, creationTime: c))
-                    
                     sqliteData.append(BrowserCookies(baseDomain: a, creationTime: b))
                     
                     n+=1
