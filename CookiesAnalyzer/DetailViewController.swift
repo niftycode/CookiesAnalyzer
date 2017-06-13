@@ -143,4 +143,9 @@ extension DetailViewController: NSTableViewDataSource, NSTableViewDelegate {
         }
         return nil
     }
+    
+    // rows not selectable
+    func tableView(_ tableView: NSTableView, shouldSelectRow row: Int) -> Bool {
+        return false
+    }
 }

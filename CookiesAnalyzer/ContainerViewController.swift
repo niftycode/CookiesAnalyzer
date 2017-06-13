@@ -26,12 +26,6 @@ class ContainerViewController: NSViewController {
     var systemDefaultBrowser: String?
     
     
-    /*
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-    }
-    */
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -107,7 +101,7 @@ class ContainerViewController: NSViewController {
         } else {
             browserNameLabel.stringValue = "Unknown Browser!"
             print("Error: Unknown Browser!")
-            // TODO: Create an UIAlert
+            // TODO: Create a NSAlert
         }
     }
     
@@ -141,11 +135,13 @@ class ContainerViewController: NSViewController {
         }
     }
     
+    /*
     // Terminate this app when closing the window
     override func viewDidDisappear() {
         super.viewDidDisappear()
         NSApplication.shared().terminate(self)
     }
+    */
     
     // MARK: - IB actions
     
