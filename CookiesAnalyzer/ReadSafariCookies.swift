@@ -33,7 +33,7 @@ class ReadSafariCookies {
             BinaryCookies.parse(cookiePath: safariCookiesFilePath, callback: {
                 (error: BinaryCookiesError?, cookies) in
                 
-                print("On the main thread? " + (Thread.current.isMainThread ? "Yes" : "No"))
+                // print("On the main thread? " + (Thread.current.isMainThread ? "Yes" : "No"))
                 
                 if let cookies = cookies {
                     self.binaryFileData = self.parseSafariCookieData(cookies: cookies)

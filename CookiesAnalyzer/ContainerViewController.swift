@@ -83,7 +83,10 @@ class ContainerViewController: NSViewController {
     }
     
     func updateSafariCookies() {
+        myData?.removeAll()
+        print(myData?.count ?? "n/a")
         myData = readSafariCookies.readFromBinaryFile()
+        print(myData?.count ?? "n/a")
         cookiesInDatabase = myData?.count
     }
     
@@ -180,6 +183,15 @@ class ContainerViewController: NSViewController {
     
     @IBAction func updateCookies(_ sender: NSButton) {
         
-        print("invoke updateCookies using responder chain")
+        switch browserFlag {
+        case 0:
+            updateFirefoxCookies()
+        case 1:
+            updateSafariCookies()
+        case 2:
+            updateChromeCookies()
+        default:
+            print("no browser available")
+        }
     }
 }

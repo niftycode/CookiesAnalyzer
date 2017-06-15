@@ -22,6 +22,7 @@ class OverviewController: NSViewController {
     var findMostCookies = FindMostCookies()
     var myData: [BrowserCookies]?
     var cookiesInDatabase: Int = 0
+    
     var browserFlag: Int? {
         didSet {
             updateUI()
@@ -31,13 +32,9 @@ class OverviewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // data source and delegate for the table view
-        // mostCookiesTableView.setDataSource(self)
-        // mostCookiesTableView.setDelegate(self)
-        
         countLabel.stringValue = String(cookiesInDatabase)
         
-        self.updateUI()
+        updateUI()
     }
     
     override func viewWillAppear() {

@@ -211,7 +211,7 @@
                 </viewController>
                 <customObject id="Np8-DC-vTe" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="87.5" y="767"/>
+            <point key="canvasLocation" x="76" y="858"/>
         </scene>
         <!--Tab View Controller-->
         <scene sceneID="toU-ZJ-ojS">
