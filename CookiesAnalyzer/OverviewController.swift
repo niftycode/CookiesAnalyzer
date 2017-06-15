@@ -31,7 +31,7 @@ class OverviewController: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+ 
         countLabel.stringValue = String(cookiesInDatabase)
         
         updateUI()
@@ -107,27 +107,6 @@ class OverviewController: NSViewController {
         alert.runModal()
         
     }
-    
-    // MARK: - IB Actions
-    
-    @IBAction func startAnalyzing(_ sender: NSButton) {
-        self.warningAlert()
-        /*
-        myData = MozillaCookies.readFromSqlite()
-        self.checkFiveMostCookies()
-        mostCookiesTableView.reloadData()
-        
-        if (myData.isEmpty) {
-            self.warningAlert()
-        } else {
-            countLabel.stringValue = String(myData.count)
-            self.checkCookiesAmount()
-        }
-        */
-    }
-    
-    
-    
 }
 
 extension OverviewController: NSTableViewDataSource, NSTableViewDelegate {

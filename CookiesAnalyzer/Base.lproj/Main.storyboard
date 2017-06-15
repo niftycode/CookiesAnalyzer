@@ -3,6 +3,8 @@
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12121"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -102,25 +104,82 @@
                 <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="CookiesAnalyzer" customModuleProvider="target"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="0.0"/>
+            <point key="canvasLocation" x="75" y="-426"/>
         </scene>
         <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
             <objects>
-                <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
-                    <window key="window" title="Cookies Analyzer" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
+                <windowController id="B8D-0N-5wS" customClass="WindowController" customModule="CookiesAnalyzer" customModuleProvider="target" sceneMemberID="viewController">
+                    <window key="window" title="Cookies Analyzer" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" tabbingMode="disallowed" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-                        <rect key="contentRect" x="541" y="372" width="480" height="270"/>
+                        <rect key="contentRect" x="541" y="372" width="725" height="534"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+                        <toolbar key="toolbar" implicitIdentifier="71F48298-C219-43DD-B54B-4052072D0DD7" autosavesConfiguration="NO" allowsUserCustomization="NO" displayMode="iconOnly" sizeMode="regular" id="EgU-rk-Zvx">
+                            <allowedToolbarItems>
+                                <toolbarItem implicitItemIdentifier="NSToolbarPrintItem" id="UEo-5Q-s8r"/>
+                                <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="OIi-Hi-QK0"/>
+                                <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="Emb-qu-A9t"/>
+                                <toolbarItem implicitItemIdentifier="9693FAF5-637C-48F0-8E4F-97AE897E7039" label="Firefox" paletteLabel="Firefox" image="firefox-48" id="WHz-bQ-CWN">
+                                    <nil key="toolTip"/>
+                                    <size key="minSize" width="48" height="48"/>
+                                    <size key="maxSize" width="48" height="48"/>
+                                    <button key="view" id="Yd3-qc-oxw">
+                                        <rect key="frame" x="0.0" y="14" width="48" height="48"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="firefox-48" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="ouG-cN-wa8">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                    </button>
+                                </toolbarItem>
+                                <toolbarItem implicitItemIdentifier="FA6F6467-704B-4D26-863E-D3FDA21BDCE7" label="Safari" paletteLabel="Safari" image="safari-48" id="jDI-3x-4NW">
+                                    <nil key="toolTip"/>
+                                    <size key="minSize" width="48" height="48"/>
+                                    <size key="maxSize" width="48" height="48"/>
+                                    <button key="view" id="6yF-JF-uaQ">
+                                        <rect key="frame" x="0.0" y="14" width="48" height="48"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="safari-48" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="PR9-AT-PjP">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                    </button>
+                                </toolbarItem>
+                                <toolbarItem implicitItemIdentifier="98512A39-E9F4-4E1B-B214-69FF9AFF5C3A" label="Chrome" paletteLabel="Chrome" image="chrome-48" id="F25-CQ-akv">
+                                    <nil key="toolTip"/>
+                                    <size key="minSize" width="48" height="48"/>
+                                    <size key="maxSize" width="48" height="48"/>
+                                    <button key="view" id="0hI-Pa-DXH">
+                                        <rect key="frame" x="1" y="14" width="48" height="48"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="chrome-48" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="9vA-Ni-eGf">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                    </button>
+                                </toolbarItem>
+                            </allowedToolbarItems>
+                            <defaultToolbarItems>
+                                <toolbarItem reference="OIi-Hi-QK0"/>
+                                <toolbarItem reference="WHz-bQ-CWN"/>
+                                <toolbarItem reference="OIi-Hi-QK0"/>
+                                <toolbarItem reference="jDI-3x-4NW"/>
+                                <toolbarItem reference="OIi-Hi-QK0"/>
+                                <toolbarItem reference="F25-CQ-akv"/>
+                            </defaultToolbarItems>
+                        </toolbar>
                     </window>
                     <connections>
+                        <outlet property="chromeBrowser" destination="0hI-Pa-DXH" id="tHm-UI-k4H"/>
+                        <outlet property="firefoxBrowser" destination="Yd3-qc-oxw" id="fM1-V9-DRJ"/>
+                        <outlet property="safariBrowser" destination="6yF-JF-uaQ" id="1OD-A3-kcx"/>
                         <segue destination="fOt-ns-p4a" kind="relationship" relationship="window.shadowedContentViewController" id="DpP-gw-DiL"/>
                     </connections>
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="250"/>
+            <point key="canvasLocation" x="75" y="45"/>
         </scene>
         <!--Container View Controller-->
         <scene sceneID="iKO-eX-qVb">
@@ -130,9 +189,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="725" height="534"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Yo-sd-WKz">
-                                <rect key="frame" x="18" y="420" width="689" height="22"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Safari Browser" id="kXN-Xz-Png">
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U09-m2-7s2">
+                                <rect key="frame" x="176" y="495" width="169" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="165" id="9VV-Wq-pbK"/>
+                                </constraints>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Safari Browser" id="Twa-Uk-qby">
                                     <font key="font" metaFont="system" size="18"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -144,74 +206,60 @@
                                     <segue destination="1j7-2O-h86" kind="embed" id="eCL-Wd-3Xi"/>
                                 </connections>
                             </containerView>
-                            <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="o3t-yR-UGr">
-                                <rect key="frame" x="32" y="448" width="660" height="5"/>
-                            </box>
-                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eOO-vI-uky">
-                                <rect key="frame" x="90" y="459" width="48" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="safari-48" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="ux5-2g-GKX">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                            </button>
-                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="veG-nb-ymv">
-                                <rect key="frame" x="148" y="459" width="48" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="chrome-48" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="6Lr-q7-8sk">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="selectChromeBrowser:" target="fOt-ns-p4a" id="kn1-5H-3NR"/>
-                                </connections>
-                            </button>
-                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AoP-4Z-8Zu">
-                                <rect key="frame" x="32" y="459" width="48" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="firefox-48" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="k5m-k1-nMW">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="selectFirefoxBrowser:" target="fOt-ns-p4a" id="TrA-yk-0ur"/>
-                                </connections>
-                            </button>
-                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="l5j-r2-q0p">
-                                <rect key="frame" x="90" y="459" width="48" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="safari-48" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="k2u-WD-jxc">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="selectSafariBrowser:" target="fOt-ns-p4a" id="GJK-Gk-4lk"/>
-                                </connections>
-                            </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pIL-YM-HD7">
+                                <rect key="frame" x="32" y="497" width="140" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Default Browser: " id="ncZ-Tf-3qi">
+                                    <font key="font" metaFont="system" size="16"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zvh-Ws-Ghx">
+                                <rect key="frame" x="32" y="457" width="140" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Selected Browser: " id="9nS-SM-Vj6">
+                                    <font key="font" metaFont="system" size="16"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QSX-fB-M4l">
+                                <rect key="frame" x="176" y="455" width="169" height="22"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Safari Browser" id="Pdf-Wv-kwh">
+                                    <font key="font" metaFont="system" size="18"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="1Yo-sd-WKz" firstAttribute="top" secondItem="o3t-yR-UGr" secondAttribute="bottom" constant="8" symbolic="YES" id="0Wv-0h-Ohx"/>
-                            <constraint firstItem="1Yo-sd-WKz" firstAttribute="leading" secondItem="mKM-i3-vx0" secondAttribute="leading" id="1KE-bg-3L1"/>
-                            <constraint firstItem="o3t-yR-UGr" firstAttribute="leading" secondItem="5RJ-2m-5h6" secondAttribute="leading" constant="32" id="Jc5-Je-UHz"/>
-                            <constraint firstItem="o3t-yR-UGr" firstAttribute="centerX" secondItem="1Yo-sd-WKz" secondAttribute="centerX" id="Uen-Yz-rBY"/>
-                            <constraint firstAttribute="trailing" secondItem="1Yo-sd-WKz" secondAttribute="trailing" constant="20" symbolic="YES" id="f3V-A0-VXC"/>
-                            <constraint firstItem="o3t-yR-UGr" firstAttribute="top" secondItem="5RJ-2m-5h6" secondAttribute="top" constant="83" id="jhg-HN-bfl"/>
-                            <constraint firstItem="1Yo-sd-WKz" firstAttribute="trailing" secondItem="mKM-i3-vx0" secondAttribute="trailing" id="p4F-aF-A8M"/>
-                            <constraint firstAttribute="bottom" secondItem="mKM-i3-vx0" secondAttribute="bottom" constant="20" symbolic="YES" id="p5j-Rg-BCT"/>
-                            <constraint firstItem="1Yo-sd-WKz" firstAttribute="leading" secondItem="5RJ-2m-5h6" secondAttribute="leading" constant="20" symbolic="YES" id="xcs-i5-exL"/>
-                            <constraint firstItem="mKM-i3-vx0" firstAttribute="top" secondItem="1Yo-sd-WKz" secondAttribute="bottom" constant="8" symbolic="YES" id="zrm-Rf-o7b"/>
+                            <constraint firstItem="U09-m2-7s2" firstAttribute="leading" secondItem="pIL-YM-HD7" secondAttribute="trailing" constant="8" symbolic="YES" id="3Hg-q7-b6e"/>
+                            <constraint firstItem="QSX-fB-M4l" firstAttribute="top" secondItem="U09-m2-7s2" secondAttribute="bottom" constant="18" id="3hh-td-Y1s"/>
+                            <constraint firstItem="zvh-Ws-Ghx" firstAttribute="centerY" secondItem="QSX-fB-M4l" secondAttribute="centerY" id="6NT-sZ-8Z7"/>
+                            <constraint firstItem="pIL-YM-HD7" firstAttribute="leading" secondItem="5RJ-2m-5h6" secondAttribute="leading" constant="34" id="833-q6-oZp"/>
+                            <constraint firstAttribute="bottom" secondItem="mKM-i3-vx0" secondAttribute="bottom" constant="20" symbolic="YES" id="8Bn-gg-LWS"/>
+                            <constraint firstItem="pIL-YM-HD7" firstAttribute="centerY" secondItem="U09-m2-7s2" secondAttribute="centerY" id="9t3-DZ-KfS"/>
+                            <constraint firstItem="U09-m2-7s2" firstAttribute="leading" secondItem="QSX-fB-M4l" secondAttribute="leading" id="C40-MS-JI2"/>
+                            <constraint firstItem="QSX-fB-M4l" firstAttribute="baseline" secondItem="zvh-Ws-Ghx" secondAttribute="firstBaseline" id="DI2-Gl-koY"/>
+                            <constraint firstAttribute="trailing" secondItem="mKM-i3-vx0" secondAttribute="trailing" constant="20" symbolic="YES" id="ERR-Mv-RrQ"/>
+                            <constraint firstItem="mKM-i3-vx0" firstAttribute="top" secondItem="QSX-fB-M4l" secondAttribute="bottom" constant="43" id="Ed0-oG-Zei"/>
+                            <constraint firstItem="mKM-i3-vx0" firstAttribute="leading" secondItem="5RJ-2m-5h6" secondAttribute="leading" constant="20" symbolic="YES" id="NAj-5A-Hic"/>
+                            <constraint firstItem="U09-m2-7s2" firstAttribute="trailing" secondItem="QSX-fB-M4l" secondAttribute="trailing" id="X1M-Kd-jxg"/>
+                            <constraint firstItem="pIL-YM-HD7" firstAttribute="leading" secondItem="zvh-Ws-Ghx" secondAttribute="leading" id="Zmz-5j-eJg"/>
+                            <constraint firstItem="QSX-fB-M4l" firstAttribute="leading" secondItem="zvh-Ws-Ghx" secondAttribute="trailing" constant="8" symbolic="YES" id="hGA-Wg-5J3"/>
+                            <constraint firstItem="zvh-Ws-Ghx" firstAttribute="firstBaseline" secondItem="QSX-fB-M4l" secondAttribute="firstBaseline" id="hco-4R-nOc"/>
+                            <constraint firstItem="pIL-YM-HD7" firstAttribute="firstBaseline" secondItem="U09-m2-7s2" secondAttribute="firstBaseline" id="jv8-bh-4T3"/>
+                            <constraint firstItem="U09-m2-7s2" firstAttribute="baseline" secondItem="pIL-YM-HD7" secondAttribute="firstBaseline" id="ovd-j0-sSP"/>
+                            <constraint firstItem="pIL-YM-HD7" firstAttribute="top" secondItem="5RJ-2m-5h6" secondAttribute="top" constant="20" symbolic="YES" id="sk7-8f-dTQ"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="browserNameLabel" destination="1Yo-sd-WKz" id="Bgu-Yq-HC2"/>
-                        <outlet property="chromeButton" destination="veG-nb-ymv" id="3BI-KC-SkA"/>
-                        <outlet property="firefoxButton" destination="AoP-4Z-8Zu" id="XQx-ms-Nrp"/>
-                        <outlet property="safariButton" destination="eOO-vI-uky" id="EIc-Oq-DVW"/>
+                        <outlet property="defaultBrowserLabel" destination="U09-m2-7s2" id="r2e-vY-KqE"/>
+                        <outlet property="selectedBrowserLabel" destination="QSX-fB-M4l" id="Xae-Fc-nlB"/>
                     </connections>
                 </viewController>
                 <customObject id="Np8-DC-vTe" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="76" y="858"/>
+            <point key="canvasLocation" x="74.5" y="759"/>
         </scene>
         <!--Tab View Controller-->
         <scene sceneID="toU-ZJ-ojS">
@@ -402,14 +450,14 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="countLabel" destination="yC6-ya-7nB" id="lbQ-8X-IPB"/>
+                        <outlet property="countLabel" destination="yC6-ya-7nB" id="A6D-Hv-iwA"/>
                         <outlet property="mostCookiesTableView" destination="ZK8-Et-Jjb" id="6Xf-aO-GRG"/>
                         <outlet property="newCookiesLabel" destination="nQw-9x-2L5" id="xs0-EH-umZ"/>
                     </connections>
                 </viewController>
                 <customObject id="U4z-6Y-xKg" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="83" y="1359.5"/>
+            <point key="canvasLocation" x="86" y="1491"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="CRF-po-N6G">
@@ -533,7 +581,7 @@
                 </viewController>
                 <customObject id="a4x-Gz-LUp" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="863" y="1360"/>
+            <point key="canvasLocation" x="869" y="1491"/>
         </scene>
     </scenes>
     <resources>

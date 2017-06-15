@@ -11,10 +11,8 @@ import Cocoa
 class ContainerViewController: NSViewController {
     
     // IB Outlets
-    @IBOutlet weak var browserNameLabel: NSTextField!
-    @IBOutlet weak var firefoxButton: NSButton!
-    @IBOutlet weak var safariButton: NSButton!
-    @IBOutlet weak var chromeButton: NSButton!
+    @IBOutlet weak var defaultBrowserLabel: NSTextField!
+    @IBOutlet weak var selectedBrowserLabel: NSTextField!
     
     // Properties
     var readSafariCookies = ReadSafariCookies()
@@ -29,15 +27,20 @@ class ContainerViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // check browser availability
         setupBrowserAvailability()
         
-        let defaultBrowser = DefaultBrowser()
-        
         // check for the default browser
+        let defaultBrowser = DefaultBrowser()
         systemDefaultBrowser = defaultBrowser.readLaunchServices()
-        // print("default browser: \(String(describing: systemDefaultBrowser))")
         
         setupDefaultBrowser()
+    }
+    
+    override func viewDidAppear() {
+        if let windowController = view.window?.windowController as? WindowController {
+            windowController.checkBrowserAvailability()
+        }
     }
     
     /**
@@ -52,23 +55,6 @@ class ContainerViewController: NSViewController {
         
         if (browserAvailability == (0, 0, 0)) {
             self.browserWarningAlert()
-        }        
-        
-        if (browserAvailability.0 == 0) {
-            firefoxButton.isEnabled = false
-        } else {
-            // self.updateFirefoxCookies()
-        }
-        if (browserAvailability.1 == 0) {
-            safariButton.isEnabled = false
-        } else {
-            // self.updateSafariCookies()
-            
-        }
-        if (browserAvailability.2 == 0) {
-            chromeButton.isEnabled = false
-        } else {
-            // call chrome setup ...
         }
     }
     
@@ -83,26 +69,26 @@ class ContainerViewController: NSViewController {
     }
     
     func updateSafariCookies() {
-        myData?.removeAll()
-        print(myData?.count ?? "n/a")
+        //myData?.removeAll()
+        //print(myData?.count ?? "n/a")
         myData = readSafariCookies.readFromBinaryFile()
-        print(myData?.count ?? "n/a")
+        //print(myData?.count ?? "n/a")
         cookiesInDatabase = myData?.count
     }
     
-    private func setupDefaultBrowser() {
+    func setupDefaultBrowser() {
         
         if (systemDefaultBrowser == "Chrome") {
-            browserNameLabel.stringValue = "Chrome Browser"
+            defaultBrowserLabel.stringValue = "Chrome Browser"
             updateChromeCookies()
         } else if (systemDefaultBrowser == "Firefox") {
-            browserNameLabel.stringValue = "Firefox Browser"
+            defaultBrowserLabel.stringValue = "Firefox Browser"
             updateFirefoxCookies()
         } else if (systemDefaultBrowser == "Safari") {
-            browserNameLabel.stringValue = "Safari Browser"
+            defaultBrowserLabel.stringValue = "Safari Browser"
             updateSafariCookies()
         } else {
-            browserNameLabel.stringValue = "Unknown Browser!"
+            defaultBrowserLabel.stringValue = "Unknown Browser!"
             print("Error: Unknown Browser!")
             // TODO: Create a NSAlert
         }
@@ -138,18 +124,10 @@ class ContainerViewController: NSViewController {
         }
     }
     
-    /*
-    // Terminate this app when closing the window
-    override func viewDidDisappear() {
-        super.viewDidDisappear()
-        NSApplication.shared().terminate(self)
-    }
-    */
-    
     // MARK: - IB actions
     
     @IBAction func selectFirefoxBrowser(_ sender: NSButton) {
-        browserNameLabel.stringValue = "Firefox Browser"
+        selectedBrowserLabel.stringValue = "Firefox Browser"
         browserFlag =  0
         updateFirefoxCookies()
         overviewViewController.cookiesInDatabase = cookiesInDatabase!
@@ -160,7 +138,7 @@ class ContainerViewController: NSViewController {
     }
     
     @IBAction func selectSafariBrowser(_ sender: NSButton) {
-        browserNameLabel.stringValue = "Safari Browser"
+        selectedBrowserLabel.stringValue = "Safari Browser"
         browserFlag = 1
         updateSafariCookies()
         overviewViewController.cookiesInDatabase = cookiesInDatabase!
@@ -171,7 +149,7 @@ class ContainerViewController: NSViewController {
     }
     
     @IBAction func selectChromeBrowser(_ sender: NSButton) {
-        browserNameLabel.stringValue = "Chrome Browser"
+        selectedBrowserLabel.stringValue = "Chrome Browser"
         browserFlag = 2
         updateChromeCookies()
         overviewViewController.cookiesInDatabase = cookiesInDatabase!
