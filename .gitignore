@@ -69,3 +69,4 @@ fastlane/test_output
 /Pods/GRDB.swift/GRDB/.DS_Store
 /Pods/.DS_Store
 /.DS_Store
+/CookiesAnalyzer.xcworkspace/xcuserdata/bodo.xcuserdatad/UserInterfaceState.xcuserstate
