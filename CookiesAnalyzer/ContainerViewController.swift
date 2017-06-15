@@ -29,15 +29,15 @@ class ContainerViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.setupBrowserAvailability()
+        setupBrowserAvailability()
         
         let defaultBrowser = DefaultBrowser()
         
         // check for the default browser
         systemDefaultBrowser = defaultBrowser.readLaunchServices()
-        print("default browser: \(String(describing: systemDefaultBrowser))")
+        // print("default browser: \(String(describing: systemDefaultBrowser))")
         
-        self.setupDefaultBrowser()
+        setupDefaultBrowser()
     }
     
     /**
@@ -176,5 +176,10 @@ class ContainerViewController: NSViewController {
         detailViewController.cookiesData = myData
         overviewViewController.browserFlag = browserFlag
         detailViewController.browserFlag = browserFlag
+    }
+    
+    @IBAction func updateCookies(_ sender: NSButton) {
+        
+        print("invoke updateCookies using responder chain")
     }
 }

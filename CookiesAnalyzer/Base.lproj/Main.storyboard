@@ -272,12 +272,12 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="144" id="q01-9Y-alJ"/>
                                 </constraints>
-                                <buttonCell key="cell" type="push" title="Analyze Cookies" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="nE0-o4-KmF">
+                                <buttonCell key="cell" type="push" title="Update Cookies" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="nE0-o4-KmF">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <connections>
-                                    <action selector="startAnalyzing:" target="QZU-0I-tep" id="Kzj-lw-j9B"/>
+                                    <action selector="updateCookies:" target="U4z-6Y-xKg" id="AlX-sh-r32"/>
                                 </connections>
                             </button>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nQw-9x-2L5">
