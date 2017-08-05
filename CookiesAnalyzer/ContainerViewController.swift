@@ -44,6 +44,17 @@ class ContainerViewController: NSViewController {
     }
     
     /**
+     Check which browser button has been clicked
+     - version: 0.1
+     - date: August 5th, 2017
+     */
+    @IBAction func browserButtonClicked(_ sender: NSView) {
+        
+        print("Button klicked!")
+        
+    }
+    
+    /**
      Check the available browser.
      - version: 0.1
      - date: March 18th, 2017

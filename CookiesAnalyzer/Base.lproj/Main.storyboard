@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12121"/>
@@ -131,6 +131,9 @@
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
+                                        <connections>
+                                            <action selector="browserButtonClicked:" target="Oky-zY-oP4" id="R4T-7b-hQv"/>
+                                        </connections>
                                     </button>
                                 </toolbarItem>
                                 <toolbarItem implicitItemIdentifier="FA6F6467-704B-4D26-863E-D3FDA21BDCE7" label="Safari" paletteLabel="Safari" image="safari-48" id="jDI-3x-4NW">
@@ -144,6 +147,9 @@
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
+                                        <connections>
+                                            <action selector="browserButtonClicked:" target="Oky-zY-oP4" id="emQ-eC-Wv3"/>
+                                        </connections>
                                     </button>
                                 </toolbarItem>
                                 <toolbarItem implicitItemIdentifier="98512A39-E9F4-4E1B-B214-69FF9AFF5C3A" label="Chrome" paletteLabel="Chrome" image="chrome-48" id="F25-CQ-akv">
@@ -157,6 +163,9 @@
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
+                                        <connections>
+                                            <action selector="browserButtonClicked:" target="Oky-zY-oP4" id="8De-Af-t2N"/>
+                                        </connections>
                                     </button>
                                 </toolbarItem>
                             </allowedToolbarItems>
@@ -292,22 +301,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="660" height="375"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yC6-ya-7nB">
-                                <rect key="frame" x="234" y="325" width="80" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="80" id="674-HL-jro"/>
-                                </constraints>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" borderStyle="bezel" alignment="center" title="12345" id="bIi-E6-yaT">
-                                    <font key="font" metaFont="system" size="21"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B72-io-9ze">
-                                <rect key="frame" x="18" y="329" width="197" height="22"/>
+                                <rect key="frame" x="18" y="329" width="153" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="3gJ-w3-0Ae"/>
-                                    <constraint firstAttribute="width" constant="193" id="i00-m1-l9P"/>
+                                    <constraint firstAttribute="width" constant="149" id="i00-m1-l9P"/>
                                 </constraints>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Cookies in Database:" id="1tK-4R-Sef">
                                     <font key="font" metaFont="system"/>
@@ -328,14 +326,6 @@
                                     <action selector="updateCookies:" target="U4z-6Y-xKg" id="AlX-sh-r32"/>
                                 </connections>
                             </button>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nQw-9x-2L5">
-                                <rect key="frame" x="234" y="274" width="80" height="30"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" borderStyle="bezel" alignment="center" title="12345" id="3ds-H3-kj6">
-                                    <font key="font" metaFont="system" size="21"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
                             <scrollView autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" hasHorizontalScroller="NO" hasVerticalScroller="NO" usesPredominantAxisScrolling="NO" horizontalScrollElasticity="none" translatesAutoresizingMaskIntoConstraints="NO" id="Wsn-ad-nUj">
                                 <rect key="frame" x="20" y="44" width="294" height="159"/>
                                 <clipView key="contentView" id="lE2-WR-MZT">
@@ -417,13 +407,32 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9ei-Dx-sRf">
-                                <rect key="frame" x="18" y="278" width="197" height="22"/>
+                                <rect key="frame" x="18" y="278" width="153" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="E2o-CA-Yqj"/>
-                                    <constraint firstAttribute="width" constant="193" id="KDh-iI-dfx"/>
+                                    <constraint firstAttribute="width" constant="149" id="KDh-iI-dfx"/>
                                 </constraints>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="New Cookies" id="yO3-Lr-sRy">
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="New Cookies:" id="yO3-Lr-sRy">
                                     <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yC6-ya-7nB">
+                                <rect key="frame" x="177" y="325" width="80" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="674-HL-jro"/>
+                                </constraints>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" borderStyle="bezel" alignment="center" title="12345" id="bIi-E6-yaT">
+                                    <font key="font" metaFont="system" size="21"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nQw-9x-2L5">
+                                <rect key="frame" x="177" y="274" width="80" height="30"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" borderStyle="bezel" alignment="center" title="12345" id="3ds-H3-kj6">
+                                    <font key="font" metaFont="system" size="21"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
@@ -435,13 +444,13 @@
                             <constraint firstItem="9ei-Dx-sRf" firstAttribute="leading" secondItem="B72-io-9ze" secondAttribute="leading" id="6xu-Q6-LDx"/>
                             <constraint firstAttribute="trailing" secondItem="n6I-2U-WjG" secondAttribute="trailing" constant="20" symbolic="YES" id="Eoh-sa-4zZ"/>
                             <constraint firstItem="Wsn-ad-nUj" firstAttribute="bottom" secondItem="n6I-2U-WjG" secondAttribute="bottom" id="Njw-Mm-eIK"/>
-                            <constraint firstItem="yC6-ya-7nB" firstAttribute="leading" secondItem="B72-io-9ze" secondAttribute="trailing" constant="21" id="WVQ-kL-gVU"/>
+                            <constraint firstItem="yC6-ya-7nB" firstAttribute="leading" secondItem="B72-io-9ze" secondAttribute="trailing" constant="8" id="WVQ-kL-gVU"/>
                             <constraint firstItem="B72-io-9ze" firstAttribute="leading" secondItem="ma8-f9-uhR" secondAttribute="leading" constant="20" symbolic="YES" id="XJU-KA-sMt"/>
                             <constraint firstItem="B72-io-9ze" firstAttribute="leading" secondItem="x9z-xJ-alD" secondAttribute="leading" id="a4R-pM-rse"/>
                             <constraint firstItem="yC6-ya-7nB" firstAttribute="leading" secondItem="nQw-9x-2L5" secondAttribute="leading" id="caW-by-hDI"/>
                             <constraint firstItem="x9z-xJ-alD" firstAttribute="leading" secondItem="Wsn-ad-nUj" secondAttribute="leading" id="cvj-Z4-Vfc"/>
                             <constraint firstItem="9ei-Dx-sRf" firstAttribute="centerY" secondItem="nQw-9x-2L5" secondAttribute="centerY" id="iig-Fw-z2q"/>
-                            <constraint firstItem="nQw-9x-2L5" firstAttribute="trailing" secondItem="Wsn-ad-nUj" secondAttribute="trailing" id="kNx-Ae-wjx"/>
+                            <constraint firstItem="nQw-9x-2L5" firstAttribute="trailing" secondItem="Wsn-ad-nUj" secondAttribute="trailing" constant="-57" id="kNx-Ae-wjx"/>
                             <constraint firstItem="x9z-xJ-alD" firstAttribute="top" secondItem="nQw-9x-2L5" secondAttribute="bottom" constant="46" id="kOS-gE-45F"/>
                             <constraint firstItem="Wsn-ad-nUj" firstAttribute="top" secondItem="x9z-xJ-alD" secondAttribute="bottom" constant="8" symbolic="YES" id="oGm-t0-bCB"/>
                             <constraint firstItem="yC6-ya-7nB" firstAttribute="trailing" secondItem="nQw-9x-2L5" secondAttribute="trailing" id="u44-qe-nrC"/>
@@ -457,7 +466,7 @@
                 </viewController>
                 <customObject id="U4z-6Y-xKg" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="86" y="1491"/>
+            <point key="canvasLocation" x="86" y="1490.5"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="CRF-po-N6G">
