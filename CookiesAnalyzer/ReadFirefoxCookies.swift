@@ -50,7 +50,7 @@ class ReadFirefoxCookies: NSObject {
                     let rows = try Row.fetchCursor(db, "SELECT * FROM moz_cookies")
                     
                     while let row = try rows.next() {
-                        let title: String = row.value(named: "baseDomain")
+                        let title: String = row["baseDomain"]
                         domainArray.append(title)
                     }
                 }
@@ -64,7 +64,7 @@ class ReadFirefoxCookies: NSObject {
                     let rows = try Row.fetchCursor(db, "SELECT * FROM moz_cookies")
                     
                     while let row = try rows.next() {
-                        let lastAccessedTime: String = row.value(named: "lastAccessed")
+                        let lastAccessedTime: String = row["lastAccessed"]
                         lastAccessedArray.append(lastAccessedTime)
                     }
                 }
@@ -78,7 +78,7 @@ class ReadFirefoxCookies: NSObject {
                     let rows = try Row.fetchCursor(db, "SELECT * FROM moz_cookies")
                     
                     while let row = try rows.next() {
-                        let creationTime: String = row.value(named: "creationTime")
+                        let creationTime: String = row["creationTime"]
                         creationTimeArray.append(creationTime)
                     }
                 }

@@ -133,9 +133,9 @@ extension DetailViewController: NSTableViewDataSource, NSTableViewDelegate {
         if let columnId = tableColumn?.identifier {
             let width = tableColumn!.width
             switch columnId {
-            case "baseDomain":
+            case let x where x.rawValue == "baseDomain":
                 return makeLabel(txt: cookiesData[row].baseDomain, width)
-            case "creationTime":
+            case let x where x.rawValue == "creationTime":
                 return makeDateLabel(txt: cookiesData[row].creationTime, width)
             default:
                 break

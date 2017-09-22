@@ -60,7 +60,7 @@ class ReadChromeCookies {
                     let rows = try Row.fetchCursor(db, "SELECT * FROM cookies")
                     
                     while let row = try rows.next() {
-                        let title: String = row.value(named: "host_key")
+                        let title: String = row["host_key"]
                         domainArray.append(title)
                     }
                 }
@@ -74,7 +74,7 @@ class ReadChromeCookies {
                     let rows = try Row.fetchCursor(db, "SELECT * FROM cookies")
                     
                     while let row = try rows.next() {
-                        let creationTime: String = row.value(named: "creation_utc")
+                        let creationTime: String = row["creation_utc"]
                         creationTimeArray.append(creationTime)
                     }
                 }

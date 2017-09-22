@@ -52,7 +52,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		55827B4CCB7EE8A622DEDCB6 /* Pods-CookiesAnalyzer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CookiesAnalyzer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CookiesAnalyzer/Pods-CookiesAnalyzer.debug.xcconfig"; sourceTree = "<group>"; };
+		500B054514D86CB935D11603 /* Pods-CookiesAnalyzer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CookiesAnalyzer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CookiesAnalyzer/Pods-CookiesAnalyzer.debug.xcconfig"; sourceTree = "<group>"; };
 		7D485B514E21B0C9692A81DC /* Pods_CookiesAnalyzer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CookiesAnalyzer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB1B47001EB76D4000683C31 /* ChromeCookiesPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChromeCookiesPath.swift; sourceTree = "<group>"; };
 		CB876CDA1EF2C92400DE4510 /* WindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
@@ -85,7 +85,7 @@
 		CBE0C7E61EB758A3000118F9 /* SafariCookiesPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SafariCookiesPath.swift; sourceTree = "<group>"; };
 		CBE0C7E71EB758A3000118F9 /* StartValuesManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartValuesManager.swift; sourceTree = "<group>"; };
 		CBE0C7E81EB758A3000118F9 /* Substrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Substrings.swift; sourceTree = "<group>"; };
-		FDCE468A33E24FC76E11BDE6 /* Pods-CookiesAnalyzer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CookiesAnalyzer.release.xcconfig"; path = "Pods/Target Support Files/Pods-CookiesAnalyzer/Pods-CookiesAnalyzer.release.xcconfig"; sourceTree = "<group>"; };
+		FB24130F557C63A8A66E6560 /* Pods-CookiesAnalyzer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CookiesAnalyzer.release.xcconfig"; path = "Pods/Target Support Files/Pods-CookiesAnalyzer/Pods-CookiesAnalyzer.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +114,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2DC70ACEBC264FCF7F0F0465 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				500B054514D86CB935D11603 /* Pods-CookiesAnalyzer.debug.xcconfig */,
+				FB24130F557C63A8A66E6560 /* Pods-CookiesAnalyzer.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		CA47FD4B1429C107B1FB9C47 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -212,8 +221,8 @@
 				CBE0C7BA1EB75823000118F9 /* CookiesAnalyzerTests */,
 				CBE0C7C51EB75823000118F9 /* CookiesAnalyzerUITests */,
 				CBE0C7A71EB75823000118F9 /* Products */,
-				F950D560B0CC2B990C4581FD /* Pods */,
 				CA47FD4B1429C107B1FB9C47 /* Frameworks */,
+				2DC70ACEBC264FCF7F0F0465 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -255,15 +264,6 @@
 				CBE0C7C81EB75823000118F9 /* Info.plist */,
 			);
 			path = CookiesAnalyzerUITests;
-			sourceTree = "<group>";
-		};
-		F950D560B0CC2B990C4581FD /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				55827B4CCB7EE8A622DEDCB6 /* Pods-CookiesAnalyzer.debug.xcconfig */,
-				FDCE468A33E24FC76E11BDE6 /* Pods-CookiesAnalyzer.release.xcconfig */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -332,21 +332,23 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Bodo Schönfeld";
 				TargetAttributes = {
 					CBE0C7A51EB75823000118F9 = {
 						CreatedOnToolsVersion = 8.3.2;
-						LastSwiftMigration = 0830;
-						ProvisioningStyle = Automatic;
+						LastSwiftMigration = 0900;
+						ProvisioningStyle = Manual;
 					};
 					CBE0C7B61EB75823000118F9 = {
 						CreatedOnToolsVersion = 8.3.2;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 						TestTargetID = CBE0C7A51EB75823000118F9;
 					};
 					CBE0C7C11EB75823000118F9 = {
 						CreatedOnToolsVersion = 8.3.2;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 						TestTargetID = CBE0C7A51EB75823000118F9;
 					};
@@ -527,7 +529,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -535,7 +539,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -577,7 +585,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -585,7 +595,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -611,36 +625,44 @@
 		};
 		CBE0C7CC1EB75823000118F9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 55827B4CCB7EE8A622DEDCB6 /* Pods-CookiesAnalyzer.debug.xcconfig */;
+			baseConfigurationReference = 500B054514D86CB935D11603 /* Pods-CookiesAnalyzer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = CookiesAnalyzer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = de.nicefield.CookiesAnalyzer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "CookiesAnalyzer/CookiesAnalyzer-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
 		CBE0C7CD1EB75823000118F9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FDCE468A33E24FC76E11BDE6 /* Pods-CookiesAnalyzer.release.xcconfig */;
+			baseConfigurationReference = FB24130F557C63A8A66E6560 /* Pods-CookiesAnalyzer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = CookiesAnalyzer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = de.nicefield.CookiesAnalyzer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "CookiesAnalyzer/CookiesAnalyzer-Bridging-Header.h";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -654,7 +676,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.nicefield.CookiesAnalyzerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CookiesAnalyzer.app/Contents/MacOS/CookiesAnalyzer";
 			};
 			name = Debug;
@@ -669,7 +692,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.nicefield.CookiesAnalyzerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CookiesAnalyzer.app/Contents/MacOS/CookiesAnalyzer";
 			};
 			name = Release;
@@ -683,7 +707,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.nicefield.CookiesAnalyzerUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
+				SWIFT_VERSION = 4.0;
 				TEST_TARGET_NAME = CookiesAnalyzer;
 			};
 			name = Debug;
@@ -697,7 +722,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.nicefield.CookiesAnalyzerUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
+				SWIFT_VERSION = 4.0;
 				TEST_TARGET_NAME = CookiesAnalyzer;
 			};
 			name = Release;
