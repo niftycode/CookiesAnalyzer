@@ -89,7 +89,7 @@ class ContainerViewController: NSViewController {
         //myData?.removeAll()
         //print(myData?.count ?? "n/a")
         myData = readSafariCookies.readFromBinaryFile()
-        //print(myData?.count ?? "n/a")
+        print(myData?.count ?? "n/a")
         cookiesInDatabase = myData?.count
     }
     
