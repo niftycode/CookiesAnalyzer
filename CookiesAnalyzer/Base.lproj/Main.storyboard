@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12121"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13196"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -120,11 +119,11 @@
                                 <toolbarItem implicitItemIdentifier="NSToolbarPrintItem" id="UEo-5Q-s8r"/>
                                 <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="OIi-Hi-QK0"/>
                                 <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="Emb-qu-A9t"/>
-                                <toolbarItem implicitItemIdentifier="9693FAF5-637C-48F0-8E4F-97AE897E7039" label="Firefox" paletteLabel="Firefox" image="firefox-48" id="WHz-bQ-CWN">
+                                <toolbarItem implicitItemIdentifier="9693FAF5-637C-48F0-8E4F-97AE897E7039" label="Firefox" paletteLabel="Firefox" tag="1" image="firefox-48" id="WHz-bQ-CWN">
                                     <nil key="toolTip"/>
                                     <size key="minSize" width="48" height="48"/>
                                     <size key="maxSize" width="48" height="48"/>
-                                    <button key="view" id="Yd3-qc-oxw">
+                                    <button key="view" tag="1" id="Yd3-qc-oxw">
                                         <rect key="frame" x="0.0" y="14" width="48" height="48"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="firefox-48" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="ouG-cN-wa8">
@@ -132,31 +131,31 @@
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
                                         <connections>
-                                            <action selector="browserButtonClicked:" target="Oky-zY-oP4" id="R4T-7b-hQv"/>
+                                            <action selector="selectFirefoxBrowser:" target="Oky-zY-oP4" id="Abv-VX-3gn"/>
                                         </connections>
                                     </button>
                                 </toolbarItem>
-                                <toolbarItem implicitItemIdentifier="FA6F6467-704B-4D26-863E-D3FDA21BDCE7" label="Safari" paletteLabel="Safari" image="safari-48" id="jDI-3x-4NW">
+                                <toolbarItem implicitItemIdentifier="FA6F6467-704B-4D26-863E-D3FDA21BDCE7" label="Safari" paletteLabel="Safari" tag="2" image="safari-48" id="jDI-3x-4NW">
                                     <nil key="toolTip"/>
                                     <size key="minSize" width="48" height="48"/>
                                     <size key="maxSize" width="48" height="48"/>
-                                    <button key="view" id="6yF-JF-uaQ">
+                                    <button key="view" tag="2" id="6yF-JF-uaQ">
                                         <rect key="frame" x="0.0" y="14" width="48" height="48"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="safari-48" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="PR9-AT-PjP">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
-                                        <connections>
-                                            <action selector="browserButtonClicked:" target="Oky-zY-oP4" id="emQ-eC-Wv3"/>
-                                        </connections>
                                     </button>
+                                    <connections>
+                                        <action selector="safariBrowser:" target="Oky-zY-oP4" id="hrZ-Mv-ddo"/>
+                                    </connections>
                                 </toolbarItem>
-                                <toolbarItem implicitItemIdentifier="98512A39-E9F4-4E1B-B214-69FF9AFF5C3A" label="Chrome" paletteLabel="Chrome" image="chrome-48" id="F25-CQ-akv">
+                                <toolbarItem implicitItemIdentifier="98512A39-E9F4-4E1B-B214-69FF9AFF5C3A" label="Chrome" paletteLabel="Chrome" tag="3" image="chrome-48" id="F25-CQ-akv">
                                     <nil key="toolTip"/>
                                     <size key="minSize" width="48" height="48"/>
                                     <size key="maxSize" width="48" height="48"/>
-                                    <button key="view" id="0hI-Pa-DXH">
+                                    <button key="view" tag="3" id="0hI-Pa-DXH">
                                         <rect key="frame" x="1" y="14" width="48" height="48"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="chrome-48" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="9vA-Ni-eGf">
@@ -164,7 +163,7 @@
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
                                         <connections>
-                                            <action selector="browserButtonClicked:" target="Oky-zY-oP4" id="8De-Af-t2N"/>
+                                            <action selector="selectChromeBrowser:" target="Oky-zY-oP4" id="IyN-iJ-f68"/>
                                         </connections>
                                     </button>
                                 </toolbarItem>
@@ -178,6 +177,9 @@
                                 <toolbarItem reference="F25-CQ-akv"/>
                             </defaultToolbarItems>
                         </toolbar>
+                        <connections>
+                            <outlet property="delegate" destination="B8D-0N-5wS" id="gjM-an-Eiy"/>
+                        </connections>
                     </window>
                     <connections>
                         <outlet property="chromeBrowser" destination="0hI-Pa-DXH" id="tHm-UI-k4H"/>
@@ -188,7 +190,7 @@
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="45"/>
+            <point key="canvasLocation" x="74.5" y="45"/>
         </scene>
         <!--Container View Controller-->
         <scene sceneID="iKO-eX-qVb">
@@ -201,7 +203,7 @@
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U09-m2-7s2">
                                 <rect key="frame" x="176" y="495" width="169" height="22"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="165" id="9VV-Wq-pbK"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="165" id="9VV-Wq-pbK"/>
                                 </constraints>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Safari Browser" id="Twa-Uk-qby">
                                     <font key="font" metaFont="system" size="18"/>
@@ -215,7 +217,7 @@
                                     <segue destination="1j7-2O-h86" kind="embed" id="eCL-Wd-3Xi"/>
                                 </connections>
                             </containerView>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pIL-YM-HD7">
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="pIL-YM-HD7">
                                 <rect key="frame" x="32" y="497" width="140" height="17"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Default Browser: " id="ncZ-Tf-3qi">
                                     <font key="font" metaFont="system" size="16"/>
@@ -223,7 +225,7 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zvh-Ws-Ghx">
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="zvh-Ws-Ghx">
                                 <rect key="frame" x="32" y="457" width="140" height="17"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Selected Browser: " id="9nS-SM-Vj6">
                                     <font key="font" metaFont="system" size="16"/>
@@ -241,24 +243,24 @@
                             </textField>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="U09-m2-7s2" firstAttribute="leading" secondItem="pIL-YM-HD7" secondAttribute="trailing" constant="8" symbolic="YES" id="3Hg-q7-b6e"/>
+                            <constraint firstItem="U09-m2-7s2" firstAttribute="leading" secondItem="pIL-YM-HD7" secondAttribute="trailing" constant="8" symbolic="YES" id="3c7-gp-2E8"/>
                             <constraint firstItem="QSX-fB-M4l" firstAttribute="top" secondItem="U09-m2-7s2" secondAttribute="bottom" constant="18" id="3hh-td-Y1s"/>
-                            <constraint firstItem="zvh-Ws-Ghx" firstAttribute="centerY" secondItem="QSX-fB-M4l" secondAttribute="centerY" id="6NT-sZ-8Z7"/>
-                            <constraint firstItem="pIL-YM-HD7" firstAttribute="leading" secondItem="5RJ-2m-5h6" secondAttribute="leading" constant="34" id="833-q6-oZp"/>
-                            <constraint firstAttribute="bottom" secondItem="mKM-i3-vx0" secondAttribute="bottom" constant="20" symbolic="YES" id="8Bn-gg-LWS"/>
-                            <constraint firstItem="pIL-YM-HD7" firstAttribute="centerY" secondItem="U09-m2-7s2" secondAttribute="centerY" id="9t3-DZ-KfS"/>
+                            <constraint firstAttribute="trailing" secondItem="mKM-i3-vx0" secondAttribute="trailing" constant="20" symbolic="YES" id="APr-HS-Iwt"/>
+                            <constraint firstItem="QSX-fB-M4l" firstAttribute="leading" secondItem="zvh-Ws-Ghx" secondAttribute="trailing" constant="8" symbolic="YES" id="AdR-So-g0Y"/>
                             <constraint firstItem="U09-m2-7s2" firstAttribute="leading" secondItem="QSX-fB-M4l" secondAttribute="leading" id="C40-MS-JI2"/>
-                            <constraint firstItem="QSX-fB-M4l" firstAttribute="baseline" secondItem="zvh-Ws-Ghx" secondAttribute="firstBaseline" id="DI2-Gl-koY"/>
-                            <constraint firstAttribute="trailing" secondItem="mKM-i3-vx0" secondAttribute="trailing" constant="20" symbolic="YES" id="ERR-Mv-RrQ"/>
-                            <constraint firstItem="mKM-i3-vx0" firstAttribute="top" secondItem="QSX-fB-M4l" secondAttribute="bottom" constant="43" id="Ed0-oG-Zei"/>
-                            <constraint firstItem="mKM-i3-vx0" firstAttribute="leading" secondItem="5RJ-2m-5h6" secondAttribute="leading" constant="20" symbolic="YES" id="NAj-5A-Hic"/>
+                            <constraint firstItem="zvh-Ws-Ghx" firstAttribute="centerY" secondItem="QSX-fB-M4l" secondAttribute="centerY" id="IN0-2R-JyS"/>
+                            <constraint firstItem="zvh-Ws-Ghx" firstAttribute="firstBaseline" secondItem="QSX-fB-M4l" secondAttribute="baseline" id="PFq-Ag-q4K"/>
+                            <constraint firstItem="mKM-i3-vx0" firstAttribute="leading" secondItem="5RJ-2m-5h6" secondAttribute="leading" constant="20" symbolic="YES" id="RBi-wR-zUu"/>
+                            <constraint firstItem="mKM-i3-vx0" firstAttribute="top" secondItem="QSX-fB-M4l" secondAttribute="bottom" constant="43" id="UwY-s9-d2s"/>
                             <constraint firstItem="U09-m2-7s2" firstAttribute="trailing" secondItem="QSX-fB-M4l" secondAttribute="trailing" id="X1M-Kd-jxg"/>
-                            <constraint firstItem="pIL-YM-HD7" firstAttribute="leading" secondItem="zvh-Ws-Ghx" secondAttribute="leading" id="Zmz-5j-eJg"/>
-                            <constraint firstItem="QSX-fB-M4l" firstAttribute="leading" secondItem="zvh-Ws-Ghx" secondAttribute="trailing" constant="8" symbolic="YES" id="hGA-Wg-5J3"/>
-                            <constraint firstItem="zvh-Ws-Ghx" firstAttribute="firstBaseline" secondItem="QSX-fB-M4l" secondAttribute="firstBaseline" id="hco-4R-nOc"/>
-                            <constraint firstItem="pIL-YM-HD7" firstAttribute="firstBaseline" secondItem="U09-m2-7s2" secondAttribute="firstBaseline" id="jv8-bh-4T3"/>
-                            <constraint firstItem="U09-m2-7s2" firstAttribute="baseline" secondItem="pIL-YM-HD7" secondAttribute="firstBaseline" id="ovd-j0-sSP"/>
-                            <constraint firstItem="pIL-YM-HD7" firstAttribute="top" secondItem="5RJ-2m-5h6" secondAttribute="top" constant="20" symbolic="YES" id="sk7-8f-dTQ"/>
+                            <constraint firstItem="pIL-YM-HD7" firstAttribute="firstBaseline" secondItem="U09-m2-7s2" secondAttribute="firstBaseline" id="cJ1-0c-Ukf"/>
+                            <constraint firstAttribute="bottom" secondItem="mKM-i3-vx0" secondAttribute="bottom" constant="20" symbolic="YES" id="ft1-eC-TH0"/>
+                            <constraint firstItem="zvh-Ws-Ghx" firstAttribute="firstBaseline" secondItem="QSX-fB-M4l" secondAttribute="firstBaseline" id="lQ5-jj-3RD"/>
+                            <constraint firstItem="pIL-YM-HD7" firstAttribute="top" secondItem="5RJ-2m-5h6" secondAttribute="top" constant="20" symbolic="YES" id="pkE-Di-NvX"/>
+                            <constraint firstItem="pIL-YM-HD7" firstAttribute="leading" secondItem="zvh-Ws-Ghx" secondAttribute="leading" id="tNq-OC-4ZW"/>
+                            <constraint firstItem="pIL-YM-HD7" firstAttribute="centerY" secondItem="U09-m2-7s2" secondAttribute="centerY" id="u94-TE-gUL"/>
+                            <constraint firstItem="pIL-YM-HD7" firstAttribute="leading" secondItem="5RJ-2m-5h6" secondAttribute="leading" constant="34" id="zK5-dv-5rj"/>
+                            <constraint firstItem="pIL-YM-HD7" firstAttribute="firstBaseline" secondItem="U09-m2-7s2" secondAttribute="baseline" id="zqP-OK-nLS"/>
                         </constraints>
                     </view>
                     <connections>
@@ -283,8 +285,12 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <font key="font" metaFont="message"/>
                         <tabViewItems/>
+                        <connections>
+                            <outlet property="delegate" destination="1j7-2O-h86" id="yVt-OC-MDV"/>
+                        </connections>
                     </tabView>
                     <connections>
+                        <outlet property="tabView" destination="y3L-w0-oLs" id="pp4-1n-083"/>
                         <segue destination="QZU-0I-tep" kind="relationship" relationship="tabItems" id="3tS-s8-96C"/>
                         <segue destination="3Be-yU-9Zg" kind="relationship" relationship="tabItems" id="8JU-Of-jA9"/>
                     </connections>
@@ -301,23 +307,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="660" height="375"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B72-io-9ze">
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B72-io-9ze">
                                 <rect key="frame" x="18" y="329" width="153" height="22"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="22" id="3gJ-w3-0Ae"/>
-                                    <constraint firstAttribute="width" constant="149" id="i00-m1-l9P"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Cookies in Database:" id="1tK-4R-Sef">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="n6I-2U-WjG">
-                                <rect key="frame" x="490" y="37" width="156" height="32"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="144" id="q01-9Y-alJ"/>
-                                </constraints>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n6I-2U-WjG">
+                                <rect key="frame" x="509" y="37" width="137" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="Update Cookies" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="nE0-o4-KmF">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -326,9 +327,10 @@
                                     <action selector="updateCookies:" target="U4z-6Y-xKg" id="AlX-sh-r32"/>
                                 </connections>
                             </button>
-                            <scrollView autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" hasHorizontalScroller="NO" hasVerticalScroller="NO" usesPredominantAxisScrolling="NO" horizontalScrollElasticity="none" translatesAutoresizingMaskIntoConstraints="NO" id="Wsn-ad-nUj">
+                            <scrollView fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" hasHorizontalScroller="NO" hasVerticalScroller="NO" usesPredominantAxisScrolling="NO" horizontalScrollElasticity="none" translatesAutoresizingMaskIntoConstraints="NO" id="Wsn-ad-nUj">
                                 <rect key="frame" x="20" y="44" width="294" height="159"/>
-                                <clipView key="contentView" id="lE2-WR-MZT">
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <clipView key="contentView" ambiguous="YES" id="lE2-WR-MZT">
                                     <rect key="frame" x="1" y="1" width="292" height="157"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
@@ -356,11 +358,9 @@
                                                             <rect key="frame" x="1" y="1" width="289" height="17"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
-                                                                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jm7-9I-oku">
+                                                                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jm7-9I-oku">
                                                                     <rect key="frame" x="0.0" y="0.0" width="275" height="17"/>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="width" constant="271" id="AoU-wx-xCF"/>
-                                                                    </constraints>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                                     <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="xJd-Av-33I">
                                                                         <font key="font" metaFont="system"/>
                                                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -368,10 +368,6 @@
                                                                     </textFieldCell>
                                                                 </textField>
                                                             </subviews>
-                                                            <constraints>
-                                                                <constraint firstItem="jm7-9I-oku" firstAttribute="leading" secondItem="LZc-O2-sXd" secondAttribute="leading" constant="2" id="cvr-8B-r55"/>
-                                                                <constraint firstItem="jm7-9I-oku" firstAttribute="centerY" secondItem="LZc-O2-sXd" secondAttribute="centerY" id="wvj-JX-Ngn"/>
-                                                            </constraints>
                                                             <connections>
                                                                 <outlet property="textField" destination="jm7-9I-oku" id="f1q-xr-o1F"/>
                                                             </connections>
@@ -395,42 +391,36 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x9z-xJ-alD">
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x9z-xJ-alD">
                                 <rect key="frame" x="18" y="211" width="285" height="17"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="281" id="EbL-3h-fnb"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="The most cookies (domains):" id="ekC-QR-lpR">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9ei-Dx-sRf">
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9ei-Dx-sRf">
                                 <rect key="frame" x="18" y="278" width="153" height="22"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="22" id="E2o-CA-Yqj"/>
-                                    <constraint firstAttribute="width" constant="149" id="KDh-iI-dfx"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="New Cookies:" id="yO3-Lr-sRy">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yC6-ya-7nB">
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yC6-ya-7nB">
                                 <rect key="frame" x="177" y="325" width="80" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="80" id="674-HL-jro"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" borderStyle="bezel" alignment="center" title="12345" id="bIi-E6-yaT">
                                     <font key="font" metaFont="system" size="21"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nQw-9x-2L5">
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nQw-9x-2L5">
                                 <rect key="frame" x="177" y="274" width="80" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" borderStyle="bezel" alignment="center" title="12345" id="3ds-H3-kj6">
                                     <font key="font" metaFont="system" size="21"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -438,25 +428,6 @@
                                 </textFieldCell>
                             </textField>
                         </subviews>
-                        <constraints>
-                            <constraint firstItem="B72-io-9ze" firstAttribute="centerY" secondItem="yC6-ya-7nB" secondAttribute="centerY" id="0qm-hw-8Bl"/>
-                            <constraint firstItem="nQw-9x-2L5" firstAttribute="top" secondItem="yC6-ya-7nB" secondAttribute="bottom" constant="21" id="3Ob-a2-uWA"/>
-                            <constraint firstItem="9ei-Dx-sRf" firstAttribute="leading" secondItem="B72-io-9ze" secondAttribute="leading" id="6xu-Q6-LDx"/>
-                            <constraint firstAttribute="trailing" secondItem="n6I-2U-WjG" secondAttribute="trailing" constant="20" symbolic="YES" id="Eoh-sa-4zZ"/>
-                            <constraint firstItem="Wsn-ad-nUj" firstAttribute="bottom" secondItem="n6I-2U-WjG" secondAttribute="bottom" id="Njw-Mm-eIK"/>
-                            <constraint firstItem="yC6-ya-7nB" firstAttribute="leading" secondItem="B72-io-9ze" secondAttribute="trailing" constant="8" id="WVQ-kL-gVU"/>
-                            <constraint firstItem="B72-io-9ze" firstAttribute="leading" secondItem="ma8-f9-uhR" secondAttribute="leading" constant="20" symbolic="YES" id="XJU-KA-sMt"/>
-                            <constraint firstItem="B72-io-9ze" firstAttribute="leading" secondItem="x9z-xJ-alD" secondAttribute="leading" id="a4R-pM-rse"/>
-                            <constraint firstItem="yC6-ya-7nB" firstAttribute="leading" secondItem="nQw-9x-2L5" secondAttribute="leading" id="caW-by-hDI"/>
-                            <constraint firstItem="x9z-xJ-alD" firstAttribute="leading" secondItem="Wsn-ad-nUj" secondAttribute="leading" id="cvj-Z4-Vfc"/>
-                            <constraint firstItem="9ei-Dx-sRf" firstAttribute="centerY" secondItem="nQw-9x-2L5" secondAttribute="centerY" id="iig-Fw-z2q"/>
-                            <constraint firstItem="nQw-9x-2L5" firstAttribute="trailing" secondItem="Wsn-ad-nUj" secondAttribute="trailing" constant="-57" id="kNx-Ae-wjx"/>
-                            <constraint firstItem="x9z-xJ-alD" firstAttribute="top" secondItem="nQw-9x-2L5" secondAttribute="bottom" constant="46" id="kOS-gE-45F"/>
-                            <constraint firstItem="Wsn-ad-nUj" firstAttribute="top" secondItem="x9z-xJ-alD" secondAttribute="bottom" constant="8" symbolic="YES" id="oGm-t0-bCB"/>
-                            <constraint firstItem="yC6-ya-7nB" firstAttribute="trailing" secondItem="nQw-9x-2L5" secondAttribute="trailing" id="u44-qe-nrC"/>
-                            <constraint firstItem="yC6-ya-7nB" firstAttribute="top" secondItem="ma8-f9-uhR" secondAttribute="top" constant="20" symbolic="YES" id="xRl-y2-Axq"/>
-                            <constraint firstAttribute="bottom" secondItem="Wsn-ad-nUj" secondAttribute="bottom" constant="44" id="z11-7H-cvi"/>
-                        </constraints>
                     </view>
                     <connections>
                         <outlet property="countLabel" destination="yC6-ya-7nB" id="A6D-Hv-iwA"/>

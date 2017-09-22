@@ -16,11 +16,10 @@ class WindowController: NSWindowController {
     @IBOutlet weak var chromeBrowser: NSButton!
     
     
-    
-    
     override func windowDidLoad() {
         super.windowDidLoad()
         
+        // print(firefoxBrowser.tag)
     }
     
     /**
@@ -29,6 +28,8 @@ class WindowController: NSWindowController {
      - date: June 15th, 2017
      */
     func checkBrowserAvailability() {
+        
+        // Not in use...
         
         let availableBrowser = AvailableBrowser()
         let browserAvailability = availableBrowser.checkBrowser()

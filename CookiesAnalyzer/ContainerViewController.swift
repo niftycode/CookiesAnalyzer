@@ -38,9 +38,13 @@ class ContainerViewController: NSViewController {
     }
     
     override func viewDidAppear() {
+        
+        // Invoke methods in WindowController
+        /*
         if let windowController = view.window?.windowController as? WindowController {
             windowController.checkBrowserAvailability()
         }
+         */
     }
     
     /**
@@ -48,11 +52,13 @@ class ContainerViewController: NSViewController {
      - version: 0.1
      - date: August 5th, 2017
      */
+    /*
     @IBAction func browserButtonClicked(_ sender: NSView) {
         
         print("Button klicked!")
         
     }
+    */
     
     /**
      Check the available browser.
@@ -137,7 +143,7 @@ class ContainerViewController: NSViewController {
     
     // MARK: - IB actions
     
-    @IBAction func selectFirefoxBrowser(_ sender: NSButton) {
+    @IBAction func selectFirefoxBrowser(_ sender: NSView) {
         selectedBrowserLabel.stringValue = "Firefox Browser"
         browserFlag =  0
         updateFirefoxCookies()
@@ -148,7 +154,7 @@ class ContainerViewController: NSViewController {
         detailViewController.browserFlag = browserFlag
     }
     
-    @IBAction func selectSafariBrowser(_ sender: NSButton) {
+    @IBAction func safariBrowser(_ sender: NSView) {
         selectedBrowserLabel.stringValue = "Safari Browser"
         browserFlag = 1
         updateSafariCookies()
@@ -159,7 +165,7 @@ class ContainerViewController: NSViewController {
         detailViewController.browserFlag = browserFlag
     }
     
-    @IBAction func selectChromeBrowser(_ sender: NSButton) {
+    @IBAction func selectChromeBrowser(_ sender: NSView) {
         selectedBrowserLabel.stringValue = "Chrome Browser"
         browserFlag = 2
         updateChromeCookies()
