@@ -17,7 +17,7 @@ class OverviewController: NSViewController {
     
     // Properties
     let startValuesManager = StartValuesManager()
-    var readSafariCookies = ReadSafariCookies()
+    //var readSafariCookies = ReadSafariCookies()
     var mostCookies = [MostCookies]()
     var findMostCookies = FindMostCookies()
     var myData: [BrowserCookies]?

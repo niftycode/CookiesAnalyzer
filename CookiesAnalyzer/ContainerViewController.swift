@@ -13,6 +13,7 @@ class ContainerViewController: NSViewController {
     // IB Outlets
     @IBOutlet weak var defaultBrowserLabel: NSTextField!
     @IBOutlet weak var selectedBrowserLabel: NSTextField!
+    @IBOutlet weak var updateCookiesLabel: NSTextField!
     
     // Properties
     var readSafariCookies = ReadSafariCookies()
@@ -23,6 +24,7 @@ class ContainerViewController: NSViewController {
     var browserFlag: Int = 1
     var systemDefaultBrowser: String?
     
+    // MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,26 +41,33 @@ class ContainerViewController: NSViewController {
     
     override func viewDidAppear() {
         
-        // Invoke methods in WindowController
-        /*
-        if let windowController = view.window?.windowController as? WindowController {
-            windowController.checkBrowserAvailability()
-        }
-         */
     }
     
-    /**
-     Check which browser button has been clicked
-     - version: 0.1
-     - date: August 5th, 2017
-     */
-    /*
-    @IBAction func browserButtonClicked(_ sender: NSView) {
+    // MARK: - Other Methods
+    
+    // Show missing data alert window
+    private func browserWarningAlert() {
         
-        print("Button klicked!")
+        let alert = NSAlert()
+        // alert.icon =
+        alert.messageText = "Warning"
+        alert.addButton(withTitle: "Ok")
+        alert.informativeText = "No Data available. Do you have any Browser installed?"
+        alert.runModal()
         
     }
-    */
+    
+    // Show unknown browser alert window
+    private func unknownBrowserWarningAlert() {
+        
+        let alert = NSAlert()
+        // alert.icon =
+        alert.messageText = "Warning"
+        alert.addButton(withTitle: "Ok")
+        alert.informativeText = "Unknown browser!"
+        alert.runModal()
+        
+    }
     
     /**
      Check the available browser.
@@ -96,31 +105,26 @@ class ContainerViewController: NSViewController {
         
         if (systemDefaultBrowser == "Chrome") {
             defaultBrowserLabel.stringValue = "Chrome Browser"
+            selectedBrowserLabel.stringValue = "Chrome Browser"
+            browserFlag = 2
             updateChromeCookies()
         } else if (systemDefaultBrowser == "Firefox") {
             defaultBrowserLabel.stringValue = "Firefox Browser"
+            selectedBrowserLabel.stringValue = "Firefox Browser"
+            browserFlag = 0
             updateFirefoxCookies()
         } else if (systemDefaultBrowser == "Safari") {
             defaultBrowserLabel.stringValue = "Safari Browser"
+            selectedBrowserLabel.stringValue = "Safari Browser"
+            browserFlag = 1
             updateSafariCookies()
         } else {
             defaultBrowserLabel.stringValue = "Unknown Browser!"
             print("Error: Unknown Browser!")
-            // TODO: Create a NSAlert
         }
     }
     
-    // Show alert window
-    private func browserWarningAlert() {
-        
-        let alert = NSAlert()
-        // alert.icon =
-        alert.messageText = "Warning"
-        alert.addButton(withTitle: "Ok")
-        alert.informativeText = "No Data available. Do you have any Browser installed?"
-        alert.runModal()
-        
-    }
+    // MARK: - Segues
     
     override func prepare(for segue: NSStoryboardSegue, sender: Any?) {
         
@@ -187,5 +191,6 @@ class ContainerViewController: NSViewController {
         default:
             print("no browser available")
         }
+        // Need a model file for temp data?
     }
 }

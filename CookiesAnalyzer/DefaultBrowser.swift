@@ -14,7 +14,7 @@ class DefaultBrowser {
      Creates the path to the LaunchServices plist file.
      - version: 0.1
      - date: March 18th, 2017
-     - returns: The URL string to the Safari cookies file.
+     - returns: Returns the path to the com.apple.launchservices.secure.plist file
      */
     fileprivate func createLaunchServicesPath() throws -> String {
         
