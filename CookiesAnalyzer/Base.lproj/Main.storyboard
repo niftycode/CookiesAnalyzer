@@ -146,10 +146,10 @@
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
+                                        <connections>
+                                            <action selector="selectSafariBrowser:" target="Oky-zY-oP4" id="Zlz-vD-azk"/>
+                                        </connections>
                                     </button>
-                                    <connections>
-                                        <action selector="safariBrowser:" target="Oky-zY-oP4" id="hrZ-Mv-ddo"/>
-                                    </connections>
                                 </toolbarItem>
                                 <toolbarItem implicitItemIdentifier="98512A39-E9F4-4E1B-B214-69FF9AFF5C3A" label="Chrome" paletteLabel="Chrome" tag="3" image="chrome-48" id="F25-CQ-akv">
                                     <nil key="toolTip"/>
@@ -184,7 +184,6 @@
                     <connections>
                         <outlet property="chromeBrowser" destination="0hI-Pa-DXH" id="tHm-UI-k4H"/>
                         <outlet property="firefoxBrowser" destination="Yd3-qc-oxw" id="fM1-V9-DRJ"/>
-                        <outlet property="safariBrowser" destination="6yF-JF-uaQ" id="1OD-A3-kcx"/>
                         <segue destination="fOt-ns-p4a" kind="relationship" relationship="window.shadowedContentViewController" id="DpP-gw-DiL"/>
                     </connections>
                 </windowController>
@@ -341,7 +340,7 @@
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                             <tableColumns>
-                                                <tableColumn editable="NO" width="289" minWidth="40" maxWidth="1000" id="BJY-C8-5v6">
+                                                <tableColumn identifier="" editable="NO" width="289" minWidth="40" maxWidth="1000" id="BJY-C8-5v6">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" enabled="NO" borderStyle="border">
                                                         <font key="font" metaFont="smallSystem"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>

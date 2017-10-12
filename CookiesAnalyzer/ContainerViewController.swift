@@ -87,9 +87,8 @@ class ContainerViewController: NSViewController {
     
     func updateSafariCookies() {
         //myData?.removeAll()
-        //print(myData?.count ?? "n/a")
         myData = readSafariCookies.readFromBinaryFile()
-        print(myData?.count ?? "n/a")
+        // print(myData?.count ?? "n/a") // How many Cookies?
         cookiesInDatabase = myData?.count
     }
     
@@ -154,7 +153,7 @@ class ContainerViewController: NSViewController {
         detailViewController.browserFlag = browserFlag
     }
     
-    @IBAction func safariBrowser(_ sender: NSView) {
+    @IBAction func selectSafariBrowser(_ sender: NSView) {
         selectedBrowserLabel.stringValue = "Safari Browser"
         browserFlag = 1
         updateSafariCookies()
