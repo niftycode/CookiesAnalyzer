@@ -12,7 +12,7 @@ extension String {
     
     // string length
     var len: Int {
-        return self.characters.count
+        return self.count
     }
     
     // return character at position n

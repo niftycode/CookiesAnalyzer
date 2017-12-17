@@ -39,7 +39,8 @@ class FirefoxCookiesPath {
         // Check the name of the user's profile directory
         iniFileText.enumerateLines({ (line, stop) -> () in
             if (line.hasPrefix(prefix)) {
-                profileDirectoryName = String(line.characters.dropFirst(14))
+                // profileDirectoryName = String(line.characters.dropFirst(14)) // deprecated
+                profileDirectoryName = String(line.dropFirst(14))
             }
         })
         

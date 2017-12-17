@@ -77,7 +77,7 @@ class DetailViewController: NSViewController {
     {
         let label = NSTextField(frame: CGRect(x: 0, y: 0, width: width, height: cellheight))
         
-        if (txt.characters.count) == 13 {
+        if (txt.count) == 13 {
             
             let date = (Int(txt))!
             
@@ -95,7 +95,7 @@ class DetailViewController: NSViewController {
             
         } else {
             
-            let epoch = String(txt.characters.dropLast(3))
+            let epoch = String(txt.dropLast(3))
             let date = Int(epoch) ?? 0
             let humanReadableDate = NSDate(jsonDate: "/Date(\(date))/")!
             

@@ -10,11 +10,10 @@ import Cocoa
 
 class WindowController: NSWindowController {
     
-    // IB outlets
+    // IBOutlets
     @IBOutlet weak var firefoxBrowser: NSButton!
     @IBOutlet weak var safariBrowser: NSButton!
     @IBOutlet weak var chromeBrowser: NSButton!
-    
     
     override func windowDidLoad() {
         super.windowDidLoad()

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13196"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13771"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -184,6 +184,7 @@
                     <connections>
                         <outlet property="chromeBrowser" destination="0hI-Pa-DXH" id="tHm-UI-k4H"/>
                         <outlet property="firefoxBrowser" destination="Yd3-qc-oxw" id="fM1-V9-DRJ"/>
+                        <outlet property="safariBrowser" destination="6yF-JF-uaQ" id="p17-vL-5hq"/>
                         <segue destination="fOt-ns-p4a" kind="relationship" relationship="window.shadowedContentViewController" id="DpP-gw-DiL"/>
                     </connections>
                 </windowController>
@@ -292,10 +293,10 @@
             </objects>
             <point key="canvasLocation" x="74.5" y="777"/>
         </scene>
-        <!--Tab View Controller-->
+        <!--My Tab View Controller-->
         <scene sceneID="toU-ZJ-ojS">
             <objects>
-                <tabViewController selectedTabViewItemIndex="0" id="1j7-2O-h86" sceneMemberID="viewController">
+                <tabViewController selectedTabViewItemIndex="0" id="1j7-2O-h86" customClass="MyTabViewController" customModule="CookiesAnalyzer" customModuleProvider="target" sceneMemberID="viewController">
                     <tabViewItems>
                         <tabViewItem label="Overview" identifier="" id="VaZ-zb-OKs"/>
                         <tabViewItem label="Details" identifier="" id="bgx-7D-Gva"/>
