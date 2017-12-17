@@ -293,10 +293,10 @@
             </objects>
             <point key="canvasLocation" x="74.5" y="777"/>
         </scene>
-        <!--My Tab View Controller-->
+        <!--Tab View Controller-->
         <scene sceneID="toU-ZJ-ojS">
             <objects>
-                <tabViewController selectedTabViewItemIndex="0" id="1j7-2O-h86" customClass="MyTabViewController" customModule="CookiesAnalyzer" customModuleProvider="target" sceneMemberID="viewController">
+                <tabViewController selectedTabViewItemIndex="0" id="1j7-2O-h86" sceneMemberID="viewController">
                     <tabViewItems>
                         <tabViewItem label="Overview" identifier="" id="VaZ-zb-OKs"/>
                         <tabViewItem label="Details" identifier="" id="bgx-7D-Gva"/>
