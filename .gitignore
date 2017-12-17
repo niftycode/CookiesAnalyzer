@@ -70,3 +70,4 @@ fastlane/test_output
 /Pods/.DS_Store
 /.DS_Store
 /CookiesAnalyzer.xcworkspace/xcuserdata/bodo.xcuserdatad/UserInterfaceState.xcuserstate
+/Info.txt

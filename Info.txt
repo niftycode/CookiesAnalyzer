@@ -1,3 +1,0 @@
-Chrome Cookies Path
-
-~/Library/Application Support/Google/Chrome/Default
