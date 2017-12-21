@@ -120,7 +120,7 @@ class ContainerViewController: NSViewController {
             updateSafariCookies()
         } else {
             defaultBrowserLabel.stringValue = "Unknown Browser!"
-            print("Error: Unknown Browser!")
+            print("Error: Unknown (default) Browser!")
         }
     }
     

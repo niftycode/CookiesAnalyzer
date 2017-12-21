@@ -1,6 +1,0 @@
-framework module Pods_CookiesAnalyzer {
-  umbrella header "Pods-CookiesAnalyzer-umbrella.h"
-
-  export *
-  module * { export * }
-}

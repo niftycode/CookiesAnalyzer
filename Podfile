@@ -1,6 +1,6 @@
-platform :osx, '10.12'
+platform :osx, '10.13'
 use_frameworks!
 
-target 'CookiesAnalyzer' do
+target 'Cookies Analyzer' do
   pod 'GRDB.swift'
 end

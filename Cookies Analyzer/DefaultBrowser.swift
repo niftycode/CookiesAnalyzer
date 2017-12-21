@@ -34,6 +34,8 @@ class DefaultBrowser {
         // create complete path to launch services
         let launchServicesPath = libraryPathString + launchServicesFile
         
+        
+        
         return launchServicesPath
     }
     
@@ -58,6 +60,7 @@ class DefaultBrowser {
         
         if (launchServicesFilePath != "noFilePath") {
             
+            // This value == nil!
             launchServicesDictionary = NSDictionary(contentsOfFile: launchServicesFilePath)
             
             if let d = launchServicesDictionary {

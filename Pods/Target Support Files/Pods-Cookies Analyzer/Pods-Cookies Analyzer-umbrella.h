@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_CookiesAnalyzerVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_CookiesAnalyzerVersionString[];
+FOUNDATION_EXPORT double Pods_Cookies_AnalyzerVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_Cookies_AnalyzerVersionString[];
 

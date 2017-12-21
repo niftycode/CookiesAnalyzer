@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:CookiesAnalyzer.xcodeproj">
+      location = "self:Cookies Analyzer.xcodeproj">
    </FileRef>
 </Workspace>
