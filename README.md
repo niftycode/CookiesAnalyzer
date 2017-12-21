@@ -27,11 +27,12 @@ To fetch the sqlite data it's using the [GRDB.swift toolkit](https://github.com/
 * August 21st, 2016: Added Safari support
 * August 26th, 2016: Fixed 'most-cookies-bug' 
 * June 7th, 2017: Added Chrome support
+* December 21st, 2017: Updated GRDB.swift
 
 ## Requirements
 
-* Xcode 8.x
-* OS X 10.12
+* Xcode 9.x
+* OS X 10.13
 * [GRDB.swift](https://github.com/groue/GRDB.swift)
 
 ## References
