@@ -92,6 +92,81 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		CB0F28022088B06800B487DB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CB15F3A91FEBC3F000BA2E6D /* WindowController.swift */,
+				CB15F3AF1FEBC3F100BA2E6D /* OverviewController.swift */,
+				CB15F3A71FEBC3F000BA2E6D /* DetailViewController.swift */,
+				CB15F3A21FEBC3BB00BA2E6D /* ContainerViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CB0F28032088B09B00B487DB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CB0F28082088B15C00B487DB /* Firefox */,
+				CB0F28072088B15500B487DB /* Chrome */,
+				CB0F28062088B14E00B487DB /* Safari */,
+				CB7C3FAA1FEBC55200ABFA2E /* BinaryCookies.swift */,
+				CB15F3A01FEBC3BB00BA2E6D /* AvailableBrowser.swift */,
+				CB15F3A11FEBC3BB00BA2E6D /* BrowserCookies.swift */,
+				CB15F3AD1FEBC3F100BA2E6D /* DefaultBrowser.swift */,
+				CB15F3AC1FEBC3F000BA2E6D /* FindMostCookies.swift */,
+				CB15F3AE1FEBC3F100BA2E6D /* MostCookies.swift */,
+				CB15F3AB1FEBC3F000BA2E6D /* StartValuesManager.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CB0F28042088B0A300B487DB /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				CB15F3991FEBC2C100BA2E6D /* Cookies_Analyzer.entitlements */,
+				CB15F38F1FEBC2C000BA2E6D /* AppDelegate.swift */,
+				CB15F3C01FEBC40500BA2E6D /* EpochFormatter.swift */,
+				CB15F3BF1FEBC40500BA2E6D /* Substrings.swift */,
+				CB15F3931FEBC2C100BA2E6D /* Assets.xcassets */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		CB0F28052088B0AA00B487DB /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				CB15F3951FEBC2C100BA2E6D /* Main.storyboard */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		CB0F28062088B14E00B487DB /* Safari */ = {
+			isa = PBXGroup;
+			children = (
+				CB15F3B01FEBC3F100BA2E6D /* ReadSafariCookies.swift */,
+				CB15F3B11FEBC3F100BA2E6D /* SafariCookiesPath.swift */,
+			);
+			path = Safari;
+			sourceTree = "<group>";
+		};
+		CB0F28072088B15500B487DB /* Chrome */ = {
+			isa = PBXGroup;
+			children = (
+				CB15F39F1FEBC3BB00BA2E6D /* ChromeCookiesPath.swift */,
+				CB15F3A81FEBC3F000BA2E6D /* ReadChromeCookies.swift */,
+			);
+			path = Chrome;
+			sourceTree = "<group>";
+		};
+		CB0F28082088B15C00B487DB /* Firefox */ = {
+			isa = PBXGroup;
+			children = (
+				CB15F3B21FEBC3F100BA2E6D /* FirefoxCookiesPath.swift */,
+				CB15F3AA1FEBC3F000BA2E6D /* ReadFirefoxCookies.swift */,
+			);
+			path = Firefox;
+			sourceTree = "<group>";
+		};
 		CB15F3831FEBC2C000BA2E6D = {
 			isa = PBXGroup;
 			children = (
@@ -113,30 +188,11 @@
 		CB15F38E1FEBC2C000BA2E6D /* Cookies Analyzer */ = {
 			isa = PBXGroup;
 			children = (
-				CB7C3FAA1FEBC55200ABFA2E /* BinaryCookies.swift */,
-				CB15F3A01FEBC3BB00BA2E6D /* AvailableBrowser.swift */,
-				CB15F3A11FEBC3BB00BA2E6D /* BrowserCookies.swift */,
-				CB15F39F1FEBC3BB00BA2E6D /* ChromeCookiesPath.swift */,
-				CB15F3A21FEBC3BB00BA2E6D /* ContainerViewController.swift */,
-				CB15F38F1FEBC2C000BA2E6D /* AppDelegate.swift */,
-				CB15F3AD1FEBC3F100BA2E6D /* DefaultBrowser.swift */,
-				CB15F3A71FEBC3F000BA2E6D /* DetailViewController.swift */,
-				CB15F3AC1FEBC3F000BA2E6D /* FindMostCookies.swift */,
-				CB15F3B21FEBC3F100BA2E6D /* FirefoxCookiesPath.swift */,
-				CB15F3AE1FEBC3F100BA2E6D /* MostCookies.swift */,
-				CB15F3AF1FEBC3F100BA2E6D /* OverviewController.swift */,
-				CB15F3A81FEBC3F000BA2E6D /* ReadChromeCookies.swift */,
-				CB15F3AA1FEBC3F000BA2E6D /* ReadFirefoxCookies.swift */,
-				CB15F3B01FEBC3F100BA2E6D /* ReadSafariCookies.swift */,
-				CB15F3B11FEBC3F100BA2E6D /* SafariCookiesPath.swift */,
-				CB15F3AB1FEBC3F000BA2E6D /* StartValuesManager.swift */,
-				CB15F3A91FEBC3F000BA2E6D /* WindowController.swift */,
-				CB15F3C01FEBC40500BA2E6D /* EpochFormatter.swift */,
-				CB15F3BF1FEBC40500BA2E6D /* Substrings.swift */,
-				CB15F3931FEBC2C100BA2E6D /* Assets.xcassets */,
-				CB15F3951FEBC2C100BA2E6D /* Main.storyboard */,
+				CB0F28052088B0AA00B487DB /* UI */,
+				CB0F28042088B0A300B487DB /* Other */,
+				CB0F28032088B09B00B487DB /* Model */,
+				CB0F28022088B06800B487DB /* Controller */,
 				CB15F3981FEBC2C100BA2E6D /* Info.plist */,
-				CB15F3991FEBC2C100BA2E6D /* Cookies_Analyzer.entitlements */,
 			);
 			path = "Cookies Analyzer";
 			sourceTree = "<group>";
@@ -171,7 +227,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Bodo Schönfeld";
 				TargetAttributes = {
 					CB15F38B1FEBC2C000BA2E6D = {
@@ -325,6 +381,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -332,6 +389,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -382,6 +440,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -389,6 +448,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;

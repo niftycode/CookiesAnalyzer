@@ -111,7 +111,7 @@
                     <window key="window" title="Cookies Analyzer" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" tabbingMode="disallowed" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-                        <rect key="contentRect" x="541" y="372" width="725" height="534"/>
+                        <rect key="contentRect" x="541" y="372" width="725" height="570"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
                         <toolbar key="toolbar" implicitIdentifier="71F48298-C219-43DD-B54B-4052072D0DD7" autosavesConfiguration="NO" allowsUserCustomization="NO" displayMode="iconOnly" sizeMode="regular" id="EgU-rk-Zvx">
                             <allowedToolbarItems>

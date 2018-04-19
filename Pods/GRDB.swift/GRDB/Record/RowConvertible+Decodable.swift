@@ -13,7 +13,7 @@ private struct RowKeyedDecodingContainer<Key: CodingKey>: KeyedDecodingContainer
     ///
     /// Different keyed containers from the same `Decoder` may return different keys here; it is possible to encode with multiple key types which are not convertible to one another. This should report all keys present which are convertible to the requested type.
     var allKeys: [Key] {
-        return row.columnNames.flatMap { Key(stringValue: $0) }
+        return row.columnNames.compactMap { Key(stringValue: $0) }
     }
     
     /// Returns whether the `Decoder` contains a value associated with the given key.

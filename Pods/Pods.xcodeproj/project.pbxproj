@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 48;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -117,7 +117,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		04512B7031C3331E2E7821F03464B21F /* Pods_Cookies_Analyzer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Cookies_Analyzer.framework; path = "Pods-Cookies Analyzer.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		04512B7031C3331E2E7821F03464B21F /* Pods_Cookies_Analyzer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cookies_Analyzer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1237D9F836F968B02DEED42F1AFCD334 /* Pool.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Pool.swift; path = GRDB/Utils/Pool.swift; sourceTree = "<group>"; };
 		123DBEA91B4562EF607B0C018A2A3384 /* SQLOperators.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SQLOperators.swift; path = GRDB/QueryInterface/Support/SQLOperators.swift; sourceTree = "<group>"; };
 		1460DDD785050C78AEC0200E9E39E4E6 /* TableDefinition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TableDefinition.swift; path = GRDB/QueryInterface/TableDefinition.swift; sourceTree = "<group>"; };
@@ -166,7 +166,7 @@
 		657EBAAD673F7B3D625399D883B578A1 /* RowConvertible+Decodable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "RowConvertible+Decodable.swift"; path = "GRDB/Record/RowConvertible+Decodable.swift"; sourceTree = "<group>"; };
 		6603F6E96A94AA09B8EBA675A1B3197B /* FTS5Tokenizer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FTS5Tokenizer.swift; path = GRDB/FTS/FTS5Tokenizer.swift; sourceTree = "<group>"; };
 		669A55A15CF57670690A4702580B19A4 /* FTS5Pattern.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FTS5Pattern.swift; path = GRDB/FTS/FTS5Pattern.swift; sourceTree = "<group>"; };
-		69ECF9A5CE8F02D686C4F852331B8013 /* Pods-Cookies Analyzer.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Cookies Analyzer.modulemap"; sourceTree = "<group>"; };
+		69ECF9A5CE8F02D686C4F852331B8013 /* Pods-Cookies Analyzer.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Cookies Analyzer.modulemap"; sourceTree = "<group>"; };
 		6A561520BFFAC75734AFE0EA418DE010 /* SQLSelectable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SQLSelectable.swift; path = GRDB/QueryInterface/SQLSelectable.swift; sourceTree = "<group>"; };
 		6A76158FB7D5DD0693268AA7B0755C79 /* SQLCollatedExpression.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SQLCollatedExpression.swift; path = GRDB/QueryInterface/SQLCollatedExpression.swift; sourceTree = "<group>"; };
 		6C39F53D67EB801DC5E528DD284B7C05 /* SQLExpression+QueryInterface.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SQLExpression+QueryInterface.swift"; path = "GRDB/QueryInterface/SQLExpression+QueryInterface.swift"; sourceTree = "<group>"; };
@@ -180,7 +180,7 @@
 		77CC6DD1FB4F170F8E16C0B3A6290471 /* DatabasePool.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DatabasePool.swift; path = GRDB/Core/DatabasePool.swift; sourceTree = "<group>"; };
 		7C6ED838A579BA16746ED0B7C96ED63B /* GRDB-Bridging.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "GRDB-Bridging.h"; path = "Support/GRDB-Bridging.h"; sourceTree = "<group>"; };
 		7C8AD2F6CCBD38811E4D47B5922D318B /* Pods-Cookies Analyzer-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Cookies Analyzer-acknowledgements.markdown"; sourceTree = "<group>"; };
-		7DA6DC80D09C49E3B3502D3A08375CBC /* GRDB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GRDB.framework; path = GRDB.swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7DA6DC80D09C49E3B3502D3A08375CBC /* GRDB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GRDB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		81D352A4CD53E20ED13AC7777925072D /* Persistable+Encodable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Persistable+Encodable.swift"; path = "GRDB/Record/Persistable+Encodable.swift"; sourceTree = "<group>"; };
 		8781C6C7BF5431E5A53C83D4BF8A2502 /* QueryInterfaceSelectQueryDefinition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QueryInterfaceSelectQueryDefinition.swift; path = GRDB/QueryInterface/QueryInterfaceSelectQueryDefinition.swift; sourceTree = "<group>"; };
 		8A5AA99E2E2F7CDA4CD3A1880357BA50 /* GRDB.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GRDB.h; path = Support/GRDB.h; sourceTree = "<group>"; };
@@ -188,7 +188,7 @@
 		907D74A3374EA39EA39C45D7877F623F /* NSNumber.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NSNumber.swift; path = GRDB/Core/Support/Foundation/NSNumber.swift; sourceTree = "<group>"; };
 		90BE031F73516F40254951D5A137C04C /* Fixits-0-90-1.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Fixits-0-90-1.swift"; path = "GRDB/Legacy/Fixits-0-90-1.swift"; sourceTree = "<group>"; };
 		923D9222165150D3FD7C86107574C22A /* Pods-Cookies Analyzer-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Cookies Analyzer-umbrella.h"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		977A19869B7A6DD39E1704E1DAE873B2 /* RowAdapter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RowAdapter.swift; path = GRDB/Core/RowAdapter.swift; sourceTree = "<group>"; };
 		97EB4C57AFC724C67DD094AE38FD9462 /* FTS5TokenizerDescriptor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FTS5TokenizerDescriptor.swift; path = GRDB/FTS/FTS5TokenizerDescriptor.swift; sourceTree = "<group>"; };
 		9C8514D973C6610C7C636C4966186630 /* DatabaseSchemaCache.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DatabaseSchemaCache.swift; path = GRDB/Core/DatabaseSchemaCache.swift; sourceTree = "<group>"; };
@@ -216,7 +216,7 @@
 		CA4B8204B61D883B248ED17244CDDE06 /* Migration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Migration.swift; path = GRDB/Migration/Migration.swift; sourceTree = "<group>"; };
 		CA4D3F8E8F5F3A2C4B7CF0EBDDFDD595 /* DatabaseWriter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DatabaseWriter.swift; path = GRDB/Core/DatabaseWriter.swift; sourceTree = "<group>"; };
 		CFFF27117104B9B9FF6917617753D2A8 /* Fixits-0.101.1.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Fixits-0.101.1.swift"; path = "GRDB/Legacy/Fixits-0.101.1.swift"; sourceTree = "<group>"; };
-		D24060D19E6DB118463AFBDC5CC5EC65 /* GRDB.swift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = GRDB.swift.modulemap; sourceTree = "<group>"; };
+		D24060D19E6DB118463AFBDC5CC5EC65 /* GRDB.swift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = GRDB.swift.modulemap; sourceTree = "<group>"; };
 		D64C76D824212ADE8426935AE06CA796 /* StatementAuthorizer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StatementAuthorizer.swift; path = GRDB/Core/StatementAuthorizer.swift; sourceTree = "<group>"; };
 		DE9765A7A6678A2BB8F736F5D21D24F7 /* Configuration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Configuration.swift; path = GRDB/Core/Configuration.swift; sourceTree = "<group>"; };
 		E12F78BB8CA05744B0851E0706EAFEB3 /* Pods-Cookies Analyzer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Cookies Analyzer.release.xcconfig"; sourceTree = "<group>"; };
@@ -390,7 +390,6 @@
 				1733AB4AEF202D1AACE8A635500A9DBF /* VirtualTableModule.swift */,
 				B30DC7367256F40538B478B8A3251269 /* Support Files */,
 			);
-			name = GRDB.swift;
 			path = GRDB.swift;
 			sourceTree = "<group>";
 		};
@@ -501,7 +500,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0930;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -751,6 +750,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -758,6 +758,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -806,6 +807,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -813,6 +815,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
