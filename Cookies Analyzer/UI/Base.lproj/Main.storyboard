@@ -240,26 +240,6 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xhy-rk-ZSz">
-                                <rect key="frame" x="14" y="13" width="172" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="push" title="Update Cookies" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Hg5-U4-004">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="updateCookies:" target="fOt-ns-p4a" id="M33-7P-UGk"/>
-                                </connections>
-                            </button>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="biQ-2V-lU9">
-                                <rect key="frame" x="188" y="20" width="519" height="17"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" id="5n4-HT-iCu">
-                                    <font key="font" metaFont="system" size="16"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
                         </subviews>
                         <constraints>
                             <constraint firstItem="U09-m2-7s2" firstAttribute="leading" secondItem="pIL-YM-HD7" secondAttribute="trailing" constant="8" symbolic="YES" id="3c7-gp-2E8"/>
@@ -285,7 +265,6 @@
                     <connections>
                         <outlet property="defaultBrowserLabel" destination="U09-m2-7s2" id="r2e-vY-KqE"/>
                         <outlet property="selectedBrowserLabel" destination="QSX-fB-M4l" id="Xae-Fc-nlB"/>
-                        <outlet property="updateCookiesLabel" destination="biQ-2V-lU9" id="zmC-FI-DUh"/>
                     </connections>
                 </viewController>
                 <customObject id="Np8-DC-vTe" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

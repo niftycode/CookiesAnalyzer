@@ -144,7 +144,7 @@ class ContainerViewController: NSViewController {
         }
     }
     
-    // MARK: - IB actions
+    // MARK: - IBActions
     
     @IBAction func selectFirefoxBrowser(_ sender: NSView) {
         selectedBrowserLabel.stringValue = "Firefox Browser"
@@ -177,20 +177,5 @@ class ContainerViewController: NSViewController {
         detailViewController.cookiesData = myData
         overviewViewController.browserFlag = browserFlag
         detailViewController.browserFlag = browserFlag
-    }
-    
-    @IBAction func updateCookies(_ sender: NSButton) {
-        
-        switch browserFlag {
-        case 0:
-            updateFirefoxCookies()
-        case 1:
-            updateSafariCookies()
-        case 2:
-            updateChromeCookies()
-        default:
-            print("no browser available")
-        }
-        // Need a model file for temp data?
     }
 }
