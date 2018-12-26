@@ -13,7 +13,7 @@ class ContainerViewController: NSViewController {
     // IB Outlets
     @IBOutlet weak var defaultBrowserLabel: NSTextField!
     @IBOutlet weak var selectedBrowserLabel: NSTextField!
-    @IBOutlet weak var updateCookiesLabel: NSTextField!
+    @IBOutlet weak var updateCookiesLabel: NSTextField!  // not connected?
     
     // Properties
     var readSafariCookies = ReadSafariCookies()
@@ -130,15 +130,15 @@ class ContainerViewController: NSViewController {
         
         let tabViewController = segue.destinationController as! NSTabViewController
         
-        for controller in tabViewController.childViewControllers {
+        for controller in tabViewController.children {
             
             if controller is OverviewController {
-                overviewViewController = controller as! OverviewController
+                overviewViewController = controller as? OverviewController
                 overviewViewController.browserFlag = browserFlag
                 overviewViewController.cookiesInDatabase = cookiesInDatabase!
                 overviewViewController.myData = myData
             } else {
-                detailViewController = controller as! DetailViewController
+                detailViewController = controller as? DetailViewController
                 detailViewController.cookiesData = myData
             }
         }

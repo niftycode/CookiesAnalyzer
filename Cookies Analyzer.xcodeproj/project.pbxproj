@@ -232,6 +232,7 @@
 				TargetAttributes = {
 					CB15F38B1FEBC2C000BA2E6D = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.Sandbox = {
@@ -490,7 +491,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "de.niftycode.Cookies-Analyzer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -507,7 +508,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "de.niftycode.Cookies-Analyzer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
