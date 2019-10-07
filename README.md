@@ -32,8 +32,8 @@ To fetch the sqlite data it's using the [GRDB.swift toolkit](https://github.com/
 
 ## Requirements
 
-* Xcode 9.x
-* OS X 10.13
+* Xcode 11
+* OS X 10.14
 * [GRDB.swift](https://github.com/groue/GRDB.swift)
 
 ## References

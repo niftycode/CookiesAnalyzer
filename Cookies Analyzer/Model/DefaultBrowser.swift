@@ -69,9 +69,11 @@ class DefaultBrowser {
                 
                 for i in 0 ..< itemsArray.count {
                     
-                    var item: Dictionary = itemsArray.object(at: i) as! [String: Any]
+                    let item: Dictionary =
+                        itemsArray.object(at: i) as! [String: Any]
                     
-                    if let dictValues = item["LSHandlerURLScheme"] as? String {
+                    if let dictValues =
+                        item["LSHandlerURLScheme"] as? String {
                         if (dictValues == "http") {
                             httpDictionary = itemsArray[i] as? Dictionary
                         }

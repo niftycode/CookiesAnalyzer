@@ -1,15 +1,34 @@
 /// FTS3 lets you define "fts3" virtual tables.
 ///
-///     // CREATE VIRTUAL TABLE documents USING fts3(content)
-///     try db.create(virtualTable: "documents", using: FTS3()) { t in
+///     // CREATE VIRTUAL TABLE document USING fts3(content)
+///     try db.create(virtualTable: "document", using: FTS3()) { t in
 ///         t.column("content")
 ///     }
-public struct FTS3 : VirtualTableModule {
+public struct FTS3: VirtualTableModule {
+    /// Options for Latin script characters. Matches the raw "remove_diacritics"
+    /// tokenizer argument.
+    ///
+    /// See https://www.sqlite.org/fts3.html
+    public enum Diacritics {
+        /// Do not remove diacritics from Latin script characters. This
+        /// option matches the raw "remove_diacritics=0" tokenizer argument.
+        case keep
+        /// Remove diacritics from Latin script characters. This
+        /// option matches the raw "remove_diacritics=1" tokenizer argument.
+        case removeLegacy
+        #if GRDBCUSTOMSQLITE
+        /// Remove diacritics from Latin script characters. This
+        /// option matches the raw "remove_diacritics=2" tokenizer argument,
+        /// available from SQLite 3.27.0
+        case remove
+        #endif
+    }
+    
     /// Creates a FTS3 module suitable for the Database
     /// `create(virtualTable:using:)` method.
     ///
-    ///     // CREATE VIRTUAL TABLE documents USING fts3(content)
-    ///     try db.create(virtualTable: "documents", using: FTS3()) { t in
+    ///     // CREATE VIRTUAL TABLE document USING fts3(content)
+    ///     try db.create(virtualTable: "document", using: FTS3()) { t in
     ///         t.column("content")
     ///     }
     public init() {
@@ -36,7 +55,10 @@ public struct FTS3 : VirtualTableModule {
             if tokenizer.arguments.isEmpty {
                 arguments.append("tokenize=\(tokenizer.name)")
             } else {
-                arguments.append("tokenize=\(tokenizer.name) " + tokenizer.arguments.map { "\"\($0)\"" as String }.joined(separator: " "))
+                arguments.append(
+                    "tokenize=\(tokenizer.name) " + tokenizer.arguments
+                        .map { "\"\($0)\"" as String }
+                        .joined(separator: " "))
             }
         }
         return arguments
@@ -54,7 +76,7 @@ public struct FTS3 : VirtualTableModule {
 /// You don't create instances of this class. Instead, you use the Database
 /// `create(virtualTable:using:)` method:
 ///
-///     try db.create(virtualTable: "documents", using: FTS3()) { t in // t is FTS3TableDefinition
+///     try db.create(virtualTable: "document", using: FTS3()) { t in // t is FTS3TableDefinition
 ///         t.column("content")
 ///     }
 public final class FTS3TableDefinition {
@@ -62,7 +84,7 @@ public final class FTS3TableDefinition {
     
     /// The virtual table tokenizer
     ///
-    ///     try db.create(virtualTable: "documents", using: FTS3()) { t in
+    ///     try db.create(virtualTable: "document", using: FTS3()) { t in
     ///         t.tokenizer = .porter
     ///     }
     /// See https://www.sqlite.org/fts3.html#creating_and_destroying_fts_tables
@@ -70,7 +92,7 @@ public final class FTS3TableDefinition {
     
     /// Appends a table column.
     ///
-    ///     try db.create(virtualTable: "documents", using: FTS3()) { t in
+    ///     try db.create(virtualTable: "document", using: FTS3()) { t in
     ///         t.column("content")
     ///     }
     ///

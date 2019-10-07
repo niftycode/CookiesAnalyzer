@@ -1,7 +1,8 @@
+#if !os(Linux)
 import Foundation
 
 /// NSString adopts DatabaseValueConvertible
-extension NSString : DatabaseValueConvertible {
+extension NSString: DatabaseValueConvertible {
     
     /// Returns a value that can be stored in the database.
     public var databaseValue: DatabaseValue {
@@ -16,3 +17,4 @@ extension NSString : DatabaseValueConvertible {
         return self.init(string: string)
     }
 }
+#endif

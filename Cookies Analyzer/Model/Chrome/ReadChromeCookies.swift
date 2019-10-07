@@ -48,7 +48,7 @@ class ReadChromeCookies {
             
             do {
                 cookiesCount = try dbQueue.inDatabase { db in
-                    try Int.fetchOne(db, "SELECT COUNT(*) FROM cookies")!
+                    try Int.fetchOne(db, sql: "SELECT COUNT(*) FROM cookies")!
                 }
             } catch _ {
                 print("Error: Can't count cookies in database!")
@@ -57,7 +57,7 @@ class ReadChromeCookies {
             do {
                 try dbQueue.inDatabase { db in
                     
-                    let rows = try Row.fetchCursor(db, "SELECT * FROM cookies")
+                    let rows = try Row.fetchCursor(db, sql: "SELECT * FROM cookies")
                     
                     while let row = try rows.next() {
                         let title: String = row["host_key"]
@@ -71,7 +71,7 @@ class ReadChromeCookies {
             do {
                 try dbQueue.inDatabase { db in
                     
-                    let rows = try Row.fetchCursor(db, "SELECT * FROM cookies")
+                    let rows = try Row.fetchCursor(db, sql: "SELECT * FROM cookies")
                     
                     while let row = try rows.next() {
                         let creationTime: String = row["creation_utc"]

@@ -1,11 +1,13 @@
 import Foundation
 #if SWIFT_PACKAGE
-    import CSQLite
+import CSQLite
+#elseif GRDBCIPHER
+import SQLCipher
 #elseif !GRDBCUSTOMSQLITE && !GRDBCIPHER
-    import SQLite3
+import SQLite3
 #endif
 
-public struct ResultCode : RawRepresentable {
+public struct ResultCode: RawRepresentable, Equatable, CustomStringConvertible {
     public let rawValue: Int32
     
     public init(rawValue: Int32) {
@@ -46,6 +48,7 @@ public struct ResultCode : RawRepresentable {
     // Primary Result codes
     // https://www.sqlite.org/rescode.html#primary_result_code_list
     
+    // swiftlint:disable operator_usage_whitespace
     public static let SQLITE_OK           = ResultCode(rawValue: 0)   // Successful result
     public static let SQLITE_ERROR        = ResultCode(rawValue: 1)   // SQL error or missing database
     public static let SQLITE_INTERNAL     = ResultCode(rawValue: 2)   // Internal logic error in SQLite
@@ -77,10 +80,12 @@ public struct ResultCode : RawRepresentable {
     public static let SQLITE_WARNING      = ResultCode(rawValue: 28)  // Warnings from sqlite3_log()
     public static let SQLITE_ROW          = ResultCode(rawValue: 100) // sqlite3_step() has another row ready
     public static let SQLITE_DONE         = ResultCode(rawValue: 101) // sqlite3_step() has finished executing
+    // swiftlint:enable operator_usage_whitespace
     
     // Extended Result Code
     // https://www.sqlite.org/rescode.html#extended_result_code_list
     
+    // swiftlint:disable operator_usage_whitespace
     public static let SQLITE_IOERR_READ              = ResultCode(rawValue: (SQLITE_IOERR.rawValue | (1<<8)))
     public static let SQLITE_IOERR_SHORT_READ        = ResultCode(rawValue: (SQLITE_IOERR.rawValue | (2<<8)))
     public static let SQLITE_IOERR_WRITE             = ResultCode(rawValue: (SQLITE_IOERR.rawValue | (3<<8)))
@@ -137,32 +142,38 @@ public struct ResultCode : RawRepresentable {
     public static let SQLITE_WARNING_AUTOINDEX       = ResultCode(rawValue: (SQLITE_WARNING.rawValue | (1<<8)))
     public static let SQLITE_AUTH_USER               = ResultCode(rawValue: (SQLITE_AUTH.rawValue | (1<<8)))
     public static let SQLITE_OK_LOAD_PERMANENTLY     = ResultCode(rawValue: (SQLITE_OK.rawValue | (1<<8)))
+    // swiftlint:enable operator_usage_whitespace
 }
 
-extension ResultCode : Equatable {
-    public static func == (_ lhs: ResultCode, _ rhs: ResultCode) -> Bool {
-        return lhs.rawValue == rhs.rawValue
-    }
-}
-
-extension ResultCode : CustomStringConvertible {
-    public var description: String {
+// CustomStringConvertible
+extension ResultCode {
+    var errorString: String? {
         // sqlite3_errstr was added in SQLite 3.7.15 http://www.sqlite.org/changes.html#version_3_7_15
-        // It is available from iOS 8.2 and OS X 10.10 https://github.com/yapstudios/YapDatabase/wiki/SQLite-version-(bundled-with-OS)
+        // It is available from iOS 8.2 and OS X 10.10
+        // https://github.com/yapstudios/YapDatabase/wiki/SQLite-version-(bundled-with-OS)
         #if GRDBCUSTOMSQLITE || GRDBCIPHER
-            return "\(rawValue) (\(String(cString: sqlite3_errstr(rawValue))))"
+        return String(cString: sqlite3_errstr(rawValue))
         #else
-            if #available(iOS 8.2, OSX 10.10, OSXApplicationExtension 10.10, iOSApplicationExtension 8.2, *) {
-                return "\(rawValue) (\(String(cString: sqlite3_errstr(rawValue))))"
-            } else {
-                return "\(rawValue)"
-            }
+        if #available(iOS 8.2, OSX 10.10, OSXApplicationExtension 10.10, *) {
+            return String(cString: sqlite3_errstr(rawValue))
+        } else {
+            return nil
+        }
         #endif
+    }
+    
+    /// :nodoc:
+    public var description: String {
+        if let errorString = errorString {
+            return "\(rawValue) (\(errorString))"
+        } else {
+            return "\(rawValue)"
+        }
     }
 }
 
 /// DatabaseError wraps an SQLite error.
-public struct DatabaseError : Error {
+public struct DatabaseError: Error, CustomStringConvertible, CustomNSError {
     
     /// The SQLite error code (see
     /// https://www.sqlite.org/rescode.html#primary_result_code_list).
@@ -201,9 +212,14 @@ public struct DatabaseError : Error {
     public let sql: String?
     
     /// Creates a Database Error
-    public init(resultCode: ResultCode = .SQLITE_ERROR, message: String? = nil, sql: String? = nil, arguments: StatementArguments? = nil) {
+    public init(
+        resultCode: ResultCode = .SQLITE_ERROR,
+        message: String? = nil,
+        sql: String? = nil,
+        arguments: StatementArguments? = nil)
+    {
         self.extendedResultCode = resultCode
-        self.message = message
+        self.message = message ?? resultCode.errorString
         self.sql = sql
         self.arguments = arguments
     }
@@ -223,7 +239,9 @@ public struct DatabaseError : Error {
     let arguments: StatementArguments?
 }
 
-extension DatabaseError: CustomStringConvertible {
+// CustomStringConvertible
+extension DatabaseError {
+    /// :nodoc:
     public var description: String {
         var description = "SQLite error \(resultCode.rawValue)"
         if let sql = sql {
@@ -239,20 +257,24 @@ extension DatabaseError: CustomStringConvertible {
     }
 }
 
-extension DatabaseError : CustomNSError {
+// CustomNSError
+extension DatabaseError {
     
     /// NSError bridging: the domain of the error.
+    /// :nodoc:
     public static var errorDomain: String {
         return "GRDB.DatabaseError"
     }
     
     /// NSError bridging: the error code within the given domain.
+    /// :nodoc:
     public var errorCode: Int {
         return Int(extendedResultCode.rawValue)
     }
     
     /// NSError bridging: the user-info dictionary.
-    public var errorUserInfo: [String : Any] {
+    /// :nodoc:
+    public var errorUserInfo: [String: Any] {
         return [NSLocalizedDescriptionKey: description]
     }
 }

@@ -209,7 +209,6 @@
 				CB15F3891FEBC2C000BA2E6D /* Frameworks */,
 				CB15F38A1FEBC2C000BA2E6D /* Resources */,
 				11C95C60B8D2C2F1C8A613A9 /* [CP] Embed Pods Frameworks */,
-				7B241B6C73F58598482CB656 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -227,12 +226,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 1100;
 				ORGANIZATIONNAME = "Bodo Schönfeld";
 				TargetAttributes = {
 					CB15F38B1FEBC2C000BA2E6D = {
 						CreatedOnToolsVersion = 9.2;
-						LastSwiftMigration = 1010;
+						LastSwiftMigration = 1100;
 						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.Sandbox = {
@@ -279,7 +278,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Cookies Analyzer/Pods-Cookies Analyzer-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-Cookies Analyzer/Pods-Cookies Analyzer-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GRDB.swift/GRDB.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -288,22 +287,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Cookies Analyzer/Pods-Cookies Analyzer-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7B241B6C73F58598482CB656 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Cookies Analyzer/Pods-Cookies Analyzer-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Cookies Analyzer/Pods-Cookies Analyzer-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9227AC3F776F30B4A06A5DD3 /* [CP] Check Pods Manifest.lock */ = {
@@ -483,6 +467,7 @@
 			baseConfigurationReference = C468C3CC225BE32F4316036E /* Pods-Cookies Analyzer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = "";
@@ -491,7 +476,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "de.niftycode.Cookies-Analyzer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -500,6 +485,7 @@
 			baseConfigurationReference = CC05DBC524CD6F2CCD59869E /* Pods-Cookies Analyzer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = "";
@@ -508,7 +494,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "de.niftycode.Cookies-Analyzer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};

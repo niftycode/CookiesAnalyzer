@@ -8,8 +8,8 @@ final class ReadWriteBox<T> {
     }
     
     init(_ value: T) {
-        self._value = value
-        self.queue = DispatchQueue(label: "GRDB.ReadWriteBox", attributes: [.concurrent])
+        _value = value
+        queue = DispatchQueue(label: "GRDB.ReadWriteBox", attributes: [.concurrent])
     }
     
     func read<U>(_ block: (T) throws -> U) rethrows -> U {
@@ -18,12 +18,22 @@ final class ReadWriteBox<T> {
         }
     }
     
-    func write(_ block: (inout T) throws -> Void) rethrows {
-        try queue.sync(flags: [.barrier]) {
+    func write<U>(_ block: (inout T) throws -> U) rethrows -> U {
+        return try queue.sync(flags: [.barrier]) {
             try block(&_value)
         }
     }
     
     private var _value: T
     private var queue: DispatchQueue
+}
+
+extension ReadWriteBox where T: Numeric {
+    @discardableResult
+    func increment() -> T {
+        return write { n in
+            n += 1
+            return n
+        }
+    }
 }

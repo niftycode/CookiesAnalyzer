@@ -40,14 +40,14 @@ class ReadFirefoxCookies: NSObject {
             var creationTimeArray = [String]()
             
             let cookiesCount = try! dbQueue.inDatabase { db in
-                try Int.fetchOne(db, "SELECT COUNT(*) FROM moz_cookies")!
+                try Int.fetchOne(db, sql: "SELECT COUNT(*) FROM moz_cookies")!
             }
             
             
             do {
                 try dbQueue.inDatabase { db in
                     
-                    let rows = try Row.fetchCursor(db, "SELECT * FROM moz_cookies")
+                    let rows = try Row.fetchCursor(db, sql: "SELECT * FROM moz_cookies")
                     
                     while let row = try rows.next() {
                         let title: String = row["baseDomain"]
@@ -61,7 +61,7 @@ class ReadFirefoxCookies: NSObject {
             do {
                 try dbQueue.inDatabase { db in
                     
-                    let rows = try Row.fetchCursor(db, "SELECT * FROM moz_cookies")
+                    let rows = try Row.fetchCursor(db, sql: "SELECT * FROM moz_cookies")
                     
                     while let row = try rows.next() {
                         let lastAccessedTime: String = row["lastAccessed"]
@@ -75,7 +75,7 @@ class ReadFirefoxCookies: NSObject {
             do {
                 try dbQueue.inDatabase { db in
                     
-                    let rows = try Row.fetchCursor(db, "SELECT * FROM moz_cookies")
+                    let rows = try Row.fetchCursor(db, sql: "SELECT * FROM moz_cookies")
                     
                     while let row = try rows.next() {
                         let creationTime: String = row["creationTime"]

@@ -1,4 +1,4 @@
-platform :osx, '10.13'
+platform :osx, '10.14'
 use_frameworks!
 
 target 'Cookies Analyzer' do
