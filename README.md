@@ -30,11 +30,12 @@ To fetch the sqlite data it's using the [GRDB.swift toolkit](https://github.com/
 * December 21st, 2017: Updated GRDB.swift
 * April 19th, 2018: Updated to Swift 4.1
 * October 7th, 2019: Update to Swift 5.1
+* November 28th, 2019: Update BinaryCookies to Swift 5.1 
 
 ## Requirements
 
 * Xcode 11
-* OS X 10.14
+* macOS 10.14
 * [GRDB.swift](https://github.com/groue/GRDB.swift)
 
 You can install GRDB via [Cocoapods](https://cocoapods.org):

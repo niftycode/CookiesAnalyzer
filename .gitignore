@@ -1,7 +1,3 @@
-# Xcode
-#
-# gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
-
 ## Build generated
 build/
 DerivedData/
@@ -69,7 +65,9 @@ fastlane/test_output
 /Pods/GRDB.swift/GRDB/.DS_Store
 /Pods/.DS_Store
 /.DS_Store
-/CookiesAnalyzer.xcworkspace/xcuserdata/bodo.xcuserdatad/UserInterfaceState.xcuserstate
+/CookiesAnalyzer.xcworkspace
 /Info.txt
 /Podfile.lock
 /Pods
+
+Cookies Analyzer.xcworkspace/
