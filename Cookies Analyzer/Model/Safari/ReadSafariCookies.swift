@@ -30,7 +30,7 @@ class ReadSafariCookies {
         
         if (safariCookiesFilePath != "noFilePath") {
             
-            BinaryCookies.parse(cookiePath: safariCookiesFilePath, callback: {
+            BinaryCookies.parse(safariCookiesFilePath, callback: {
                 (error: BinaryCookiesError?, cookies) in
                 
                 // print("On the main thread? " + (Thread.current.isMainThread ? "Yes" : "No"))

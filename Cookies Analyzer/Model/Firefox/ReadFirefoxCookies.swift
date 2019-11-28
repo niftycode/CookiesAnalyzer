@@ -30,6 +30,8 @@ class ReadFirefoxCookies: NSObject {
             firefoxCookiesFilePath = "noFilePath"
         }
         
+        // TODO: Check if Firefox is open
+        
         if (firefoxCookiesFilePath != "noFilePath") {
             
             // Get data from the database
