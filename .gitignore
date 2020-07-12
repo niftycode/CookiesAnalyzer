@@ -71,3 +71,4 @@ fastlane/test_output
 /Pods
 
 Cookies Analyzer.xcworkspace/
+/Cookies Analyzer/.DS_Store
